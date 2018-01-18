@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<!-- node that renders Grid Screen
+    handles bookmark buttons
+    handles start of video playback
+ -->
+<component name="GridScreen" extends="Group" initialFocus="RowList">
+    <interface>
+        <!-- Grid Content Node -->
+        <field id="content" type="node" alias="RowList.content" onChange="onContentChange"/>
+
+        <!-- Row item selection handler -->
+        <field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="RowList.rowItemSelected"/>
+
+        <!-- Row item focused handler -->
+        <field id="itemFocused" type="intarray" alias="RowList.rowItemFocused" onChange="OnItemFocused"/>
+
+        <!-- Interface to focused item (Content Node) -->
+        <field id="focusedContent"  type="node"/>
+    </interface>
+
+    <!-- main handler -->
+    <script type="text/brightscript" uri="pkg:/components/screens/GridScreen/GridScreen.brs" />
+
+    <children>
+        <RowList
+            id="RowList"
+            focusBitmapUri="pkg:/images/focus_gridd.9.png"
+      			translation="[0, 130]"
+      			itemSize="[1280, 218]"
+                  rowHeights="[488, 218]"
+      			numRows="10"
+      			itemSpacing="[13, 0]"
+      			focusXOffset="[260, 90]"
+      			rowFocusAnimationStyle="fixedFocusWrap"
+      			rowItemSize="[[730,418],[262, 147]]"
+      			rowItemSpacing="[[45, 15]]"
+      			showRowLabel="true"
+      			showRowCounter="true"
+      			rowLabelOffset="[[90, 20]]"
+            />
+        <MetadataBox
+            id="metadata"
+            translation="[370, 320]"
+            visible="false"
+            />
+
+    </children>
+</component>

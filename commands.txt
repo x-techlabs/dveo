@@ -1,0 +1,282 @@
+    1  mysql -u root -p
+    2  cd /var/www/1stud.io/public_html/1stud/
+    3  composer update
+    4  composer clear-cache
+    5  composer update
+    6  composer diagnose
+    7  cd ..
+    8  chmod -R 777 1stud/
+    9  composer diagnose
+   10  composer -v
+   11  cd 1stud/
+   12  composer diagnose
+   13  composer validate
+   14  composer install
+   15  composer update
+   16  cd /var/www/
+   17  chmod -R 775 1stud.io/
+   18  cd 1stud.io/public_html/1stud/
+   19  ls
+   20  cd app/
+   21  ls
+   22  chmod -R 777 storage/
+   23  cd ..
+   24  cd /var/www/1stud.io/public_html/1stud/
+   25  composer update
+   26  cd /media
+   27  ls
+   28  cd /var/www/1stud.io/public_html/1stud/
+   29  chmod -R 777 app/
+   30  cd ..
+   31  chmod -R 777 1stud/
+   32  cd /var/www/1stud.io/public_html/1stud/
+   33  php artisan migrate
+   34  cd public/
+   35  chmod 777 -R tvapp/
+   36  cd /var/www/1stud.io/public_html/1stud/
+   37  chmod -R 777 public/
+   38  cd /var
+   39  ls
+   40  nano ifame.sql 
+   41  cd var
+   42  cd /var
+   43  ls
+   44  ls -sh cm.zip 
+   45  cd var
+   46  cd /var
+   47  ls
+   48  unzip cm.zip 
+   49  sudo apt-get install zip
+   50  unzip cm.zip 
+   51  ls
+   52  cd forge/
+   53  ls
+   54  cd ifame.channelmanager.tv
+   55  ls
+   56  pushd 
+   57  cd public/
+   58  ls
+   59  cd assets/
+   60  ls
+   61  cd data/
+   62  ls
+   63  cd ../..
+   64  ls
+   65  cd assets/
+   66  ls
+   67  cd ../../..
+   68  cd../
+   69  cd ..
+   70  rm -rf forge/
+   71  ls
+   72  cd /var/www/ifame.channelmanager.tv_beta/
+   73  ls
+   74  cd public/
+   75  ls
+   76  cd local/
+   77  ls
+   78  cd ..
+   79  ls
+   80  cd assets/
+   81  ls
+   82  cd uploads/
+   83  ls
+   84  mysql -u root -p
+   85  cd /var/www/1stud.io/public_html/1stud/
+   86  composer update
+   87  cd  /var/www/1stud.io/public_html/1stud/
+   88  composer update
+   89  mysql -u root -p
+   90  cd /var/www/1stud.io/public_html/1stud/
+   91  php artizase route:list
+   92  sudo php artizase route:list
+   93  php artizane route:list
+   94  php artisan route:list
+   95  php artisan route
+   96  composer update
+   97  ls
+   98  cd /var/www/
+   99  ls
+  100  s3cmd du -H s3://aceplayout
+  101  s3cmd du s3://aceplayout
+  102  s3cmd du -H s3://aceplayout
+  103  s3cmd du s3://aceplayout
+  104  s3cmd cp --recursive s3://ifame s3://aceplayout
+  105  s3cmd du -H s3://aceplayout
+  106  s3cmd du s3://aceplayout
+  107  s3cmd du -H s3://ifame
+  108  s3cmd du s3://aceplayout
+  109  s3cmd du -H s3://aceplayout
+  110  s3cmd du s3://aceplayout
+  111  s3cmd du -H s3://aceplayout
+  112  ls
+  113  cd /var/www/1stud.io/public_html/1stud/
+  114  composer update
+  115  php artisan migrate
+  116  cd /var/www/1stud.io/public_html/1stud/
+  117  cd app/storage/logs/
+  118  ls
+  119  rm -rf laravel.log 
+  120  nano laravel.log
+  121  chmod -R 777 laravel.log 
+  122  cd /var/www/1stud.io/public_html/1stud/
+  123  composer update
+  124  cd /var/www/1stud.io/public_html/1stud/
+  125  composer update
+  126  cd /var/www/1stud.io/public_html/1stud/
+  127  composer update
+  128  sudo reboot
+  129  sudo mysql -u root -p
+  130  reboot
+  131  cd /var/www/1stud.io/public_html/1stud/
+  132  php artisan migrate
+  133  sudo mysql -u root -p users > /var/www/1stud.io/public_html/1stud/ace_08_17_2016.sql
+  134  sudo mysqldump -u root -p users > /var/www/1stud.io/public_html/1stud/ace_08_17_2016.sql
+  135  ls
+  136  nano ace_08_17_2016.sql 
+  137  sudo mysql -u root -p 
+  138  php artisan migrate
+  139  php artisan migrate:rollback
+  140  php artisan migrate
+  141  cd /var/www/1stud.io/public_html/1stud/
+  142  composer update
+  143  cd /var/www/1stud.io/public_html/1stud/
+  144  composer update
+  145  reboot
+  146  mysqldump users > users_sept_29_2016.sql
+  147  mysql -u=root
+  148  mysql -u=root -p
+  149  mysql -u root -p
+  150  mysqldump -u root -p users > users_2016_09_28.sql
+  151  ls -l
+  152  rm users_sept_29_2016.sql
+  153  ls -l
+  154  cd /var/www/1studio
+  155  cd /var/www/
+  156  ls -l
+  157  cd 1stud.io
+  158  ls
+  159  cd public_html
+  160  ls
+  161  cd 1stud
+  162  ls
+  163  ls -l
+  164  clear
+  165  ls
+  166  cd /var
+  167  ls
+  168  cd www
+  169  ls
+  170  cd 1stud.io/
+  171  ls
+  172  cd public_html/
+  173  ls
+  174  cd 1stud
+  175  ls
+  176  clear
+  177  ls
+  178  vi IndexController.php 
+  179  vi server.php 
+  180  cd app
+  181  ls
+  182  cd ..
+  183  ls
+  184  vi server.php 
+  185  cd app
+  186  ls
+  187  cd ..
+  188  ls
+  189  cd public/
+  190  ls
+  191  vi index.php 
+  192  cd transcoder/
+  193  ls
+  194  vi index.html 
+  195  cd
+  196  exit
+  197  clear
+  198  ls
+  199  cd /var
+  200  ls
+  201  cd www
+  202  cd 1stud.io/
+  203  sl
+  204  clear
+  205  ls
+  206  cd public_html/
+  207  ls
+  208  cd 1stud
+  209  ls
+  210  cd app
+  211  ls
+  212  cd ..
+  213  cd public
+  214  ls
+  215  cd js
+  216  ls
+  217  cd ..
+  218  ls
+  219  vi  onestudio.html
+  220  clear
+  221  ls
+  222  cd js
+  223  ls
+  224  vi ace.js
+  225  cd ..
+  226  ls
+  227  vi onestudio.html 
+  228  clear
+  229  ls
+  230  cd jss
+  231  cd js
+  232  ls
+  233  vi panda-uploader.min.js 
+  234  cd ..
+  235  clear
+  236  ls
+  237  ls -rtl
+  238  cd ..
+  239  ls
+  240  cd app
+  241  ls
+  242  cd views
+  243  ls
+  244  cd video
+  245  ls
+  246  clear
+  247  ls -rtl
+  248  cd ..
+  249  ls
+  250  cd upload
+  251  ls
+  252  ls -rtl
+  253  vi upload.blade.php 
+  254  vi postproc.blade.php 
+  255  vi upload.blade.php 
+  256  cd ..
+  257  cd ,,
+  258  cd ..
+  259  ls
+  260  cd storage
+  261  ls
+  262  cd logs
+  263  ls
+  264  ls -rtl
+  265  vi laravel.log 
+  266  ls -rtl
+  267  vi laravel.log
+  268  cd ..
+  269  ls
+  270  cd ..
+  271  ls
+  272  cd controllers/
+  273  ls
+  274  vi UploadController.php 
+  275  clear
+  276  ls
+  277  vi UploadController.php 
+  278  clear
+  279  history
+  280  cd ..
+  281  ls -rtl
+  282  history > commands.txt

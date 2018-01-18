@@ -1,0 +1,26 @@
+.fp-button {  top:-1px; padding: 0; width: 38px !important;  border: none;  outline: none; background: none;  text-align: center;  display:block;  cursor: pointer;  text-decoration:none !important;position:absolute;z-index:11;  }
+
+.fp-button > svg  { pointer-events: none; }
+.fp-button > svg .fill  { fill:#CCCCCC; }
+
+
+.fp-snapshot {
+    top: 30px;
+    right: 15px;
+}
+
+.fp-snapshot:hover {opacity: 1;}
+
+
+.flowplayer.is-mouseout .fp-button {opacity:0;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);-webkit-transition:opacity .15s .3s;-moz-transition:opacity .15s .3s;transition:opacity .15s .3s}
+.flowplayer.is-mouseover .fp-button, .flowplayer.is-mouseout .fp-button.fp-vr-glasses {opacity:0.8;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80)}
+
+
+/* Notifications Style */
+.notification { width: 300px; height: 50px;  text-align: center;  vertical-align: middle;  background-color: #CCCCCC;  border-radius: 10px;  margin-left: auto ;  margin-right: auto ;  }
+.notification.message {  color: #FFFFFF;  font-size: 12px;  }
+
+.flowplayer.is-notification .notification{opacity:1;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100)}
+.flowplayer .notification {opacity:0;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);-webkit-transition:opacity .15s .3s;-moz-transition:opacity .15s .3s;transition:opacity .15s .3s}
+
+

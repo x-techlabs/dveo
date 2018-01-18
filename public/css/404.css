@@ -1,0 +1,483 @@
+
+html	{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(#9c9cff, #004);
+}
+
+body {width: 506px;
+    height: 346px;
+    font-family: "C64 User Mono";
+    font-weight: normal;
+    font-style: normal;
+    overflow: hidden;
+}
+
+.l1	{
+    -webkit-animation: bounce 1s ease-out alternate infinite;
+    -moz-animation: bounce 1s ease-out alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l2	{
+    -webkit-animation: bounce 1s ease-out 100ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 100ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 1em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l3	{
+    -webkit-animation: bounce 1s ease-out 200ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 200ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l4	{
+    -webkit-animation: bounce 1s ease-out 300ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 300ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 3em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l5	{
+    -webkit-animation: bounce 1s ease-out 400ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 400ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 4em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l6	{
+    -webkit-animation: bounce 1s ease-out 500ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 500ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 5em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l7	{
+    -webkit-animation: bounce 1s ease-out 600ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 600ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 6em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l8	{
+    -webkit-animation: bounce 1s ease-out 700ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 700ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 7em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l9	{
+    -webkit-animation: bounce 1s ease-out 800ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 800ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 8em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l10	{
+    -webkit-animation: bounce 1s ease-out 900ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 900ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 9em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l11	{
+    -webkit-animation: bounce 1s ease-out 1000ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1000ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 10em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l12	{
+    -webkit-animation: bounce 1s ease-out 1100ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1100ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 11em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l13	{
+    -webkit-animation: bounce 1s ease-out 1200ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1200ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 12em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l14	{
+    -webkit-animation: bounce 1s ease-out 1300ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1300ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 13em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l15	{
+    -webkit-animation: bounce 1s ease-out 1400ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1400ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 14em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l16	{
+    -webkit-animation: bounce 1s ease-out 1500ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1500ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 15em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l17	{
+    -webkit-animation: bounce 1s ease-out 1600ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1600ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 16em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l18	{
+    -webkit-animation: bounce 1s ease-out 1700ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1700ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 17em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l19	{
+    -webkit-animation: bounce 1s ease-out 1800ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1800ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 18em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l20	{
+    -webkit-animation: bounce 1s ease-out 1900ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 1900ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 19em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l21	{
+    -webkit-animation: bounce 1s ease-out 2000ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2000ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 20em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l22	{
+    -webkit-animation: bounce 1s ease-out 2100ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2100ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 21em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l23	{
+    -webkit-animation: bounce 1s ease-out 2200ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2200ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 22em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l24	{
+    -webkit-animation: bounce 1s ease-out 2300ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2300ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 23em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l25	{
+    -webkit-animation: bounce 1s ease-out 2400ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2400ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 24em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l26	{
+    -webkit-animation: bounce 1s ease-out 2500ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2500ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 25em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l27	{
+    -webkit-animation: bounce 1s ease-out 2600ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2600ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 26em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l28	{
+    -webkit-animation: bounce 1s ease-out 2700ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2700ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 27em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+.l29	{
+    -webkit-animation: bounce 1s ease-out 2800ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2800ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 28em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l30	{
+    -webkit-animation: bounce 1s ease-out 2900ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 2900ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 29em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+.l31	{
+    -webkit-animation: bounce 1s ease-out 3000ms alternate infinite;
+    -moz-animation: bounce 1s ease-out 3000ms alternate infinite;
+    position: absolute;
+    top: 0;
+    left: 30em;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes scroll{
+    0%	{-webkit-transform: translateX(280px);}
+    100% {-webkit-transform: translateX(-500px);}
+}
+@-moz-keyframes scroll{
+    0%	{-moz-transform: translateX(280px);}
+    100% {-moz-transform: translateX(-500px);}
+}
+
+.scroll{
+    -webkit-animation: scroll 15s linear infinite;
+    -moz-animation: scroll 15s linear infinite;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    margin-top: -37px;
+    color: #adadff;
+    opacity: 0.9;
+}
+
+@-webkit-keyframes bounce{
+    0%	{-webkit-transform: translateY(140px);
+        -moz-transform: translateY(140px);}
+    100%{-webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);}
+overflow: hidden;
+}
+@-moz-keyframes bounce{
+    0%	{-moz-transform: translateY(140px);}
+    100%{-moz-transform: translateY(0px);}
+overflow: hidden;
+}
+
+.frame	{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -122px;
+    margin-left: -197px;
+    width: 314px;
+    height: 228px;
+    background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: frames 15s steps(1, end) infinite;
+}
+@-webkit-keyframes frames {
+    0%  {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');}
+    60% {background-image: none;}
+
+
+    96%  {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');}
+
+    96.2% {background-image: none;}
+    98%  {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');}
+    98.6%{ background-image: none;}
+}
+
+@keyframes frames {
+    0%  {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');}
+    50% {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');}
+    60% {background-image: none;}
+
+
+    96%  {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');}
+
+    96.2% {background-image: none;}
+    98%  {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');}
+    98.6%{ background-image: none;}
+}
+@-moz-keyframes frames {
+    0%  {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');background-size: cover;}
+    60% {background-size: 0;}
+
+
+    96%  {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');background-size: cover;}
+
+    96.2% {background-size: 0;}
+    98%  {background-image: url('https://25.media.tumblr.com/23a26d7c4c6cb14296faecab3d97027d/tumblr_mw7cd52wMJ1rq3qu8o1_500.gif');background-size: cover;}
+    98.6%{ background-size: 0;}
+}
+
+
+.area{
+    display: block;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    width: 234px;
+    height: 148px;
+    background: #007;
+    color: #9c9cff;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 8;
+}
+
+.title{
+    font-size: 6px;
+    position: relative;
+    top: 3px;
+    line-height: 100%;
+}
+
+.cursor{
+    font-size: 150%;
+    color: #9c9cff;
+    position: absolute;
+    top: 63px;
+    left: 31px;
+    z-index: 9;
+    -webkit-animation: blink 1s steps(1, end) infinite;
+    -moz-animation: blink 1s steps(1, end) infinite;
+}
+
+@-webkit-keyframes blink{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+}
+@-moz-keyframes blink{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+}
+
+
+
+.tv{
+    width: 506px;
+    height: 346px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -173px;
+    margin-left: -253px;
+    z-index: 2;
+    background-image: url('https://image.ibb.co/iMHMNv/tv.png'), url('https://image.ibb.co/crAQhv/screen1.png');
+}
+
+@font-face {
+    font-family: "C64 User Mono";
+    src:url(data:application/x-font-woff;base64,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);
+    font-weight: normal;
+    font-style: normal;
+}

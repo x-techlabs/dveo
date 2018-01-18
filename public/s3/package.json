@@ -1,0 +1,12 @@
+{
+  "name": "HybrikAPI_Samples",
+  "version": "0.0.2",
+  "description": "HybrikAPI connector and examples",
+  "main": "display_all_jobs.js",
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "request-promise": "^0.4.3"
+  },
+  "author": "Hybrik, Inc",
+  "license": "ISC"
+}

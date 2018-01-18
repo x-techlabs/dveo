@@ -1,0 +1,663 @@
+/* -----------------------------------------------------------------------
+
+TAKO Vertical Dropdown Mega Menu
+Version: 1.2
+Latest Update: 7/30/2013
+By: YSBDesign
+Email: yshaisb@gmail.com
+
+----------------------------------------------------------------------- */
+
+
+/* WEBFONTS TO USE IN THIS MENU */
+
+
+/*body {*/
+    /*margin-top:10px;*/
+    /*background:#e0e7e6;*/
+    /*font-family:Raleway;*/
+/*}*/
+#tako_nav{
+    background: transparent;
+}
+/* NAVIGATION BODY */
+ #tako_nav ul.nav {
+    position:relative;
+    background:#F7F7F1;
+    width:210px;
+    margin:auto 300px;
+     margin-left: 0;
+    padding:0;
+    list-style: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+/* START PAGE ITEMS STYLE */
+ #tako_nav .nav li:hover a {
+    background:#616b74;
+    color:#F7F7F1;
+}
+#tako_nav .nav li em {
+    margin: 0 8px 0 -2px;
+}
+#tako_nav .nav li:hover .first {
+    color:#F7F7F1;
+}
+#tako_nav .nav li > a {
+    width:auto;
+    padding-left:20px;
+    height:50px;
+    line-height:34px;
+    display:block;
+    position:relative;
+    text-decoration:none;
+    /*text-transform:uppercase;*/
+    font-size:14px;
+    color:#686868;
+
+    /*THIS IS THE SEPARATOR LINE OF THE PAGES */
+    -webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .05);
+    -moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05);
+    box-shadow:0 1px 0 rgba(0, 0, 0, .05);
+
+    -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    -o-transition:all 0.2s linear;
+    transition:all 0.2s linear;
+}
+#tako_nav .nav li > a:hover {
+    color:#F7F7F1;
+    background:#616b74;
+}
+#tako_nav .nav > li a.no-hover:hover {
+    color:#616b74;
+    background:#F7F7F1;
+    cursor:default;
+}
+
+/* START OF SOCIAL ICONS */
+
+.social {
+    margin-right:10px;
+    padding-top:11px;
+    float:right;
+    font-size:28px;
+    color:#7C8994;
+    cursor: pointer;
+}
+.social:hover {
+    color:#616b74;
+}
+/* END OF SOCIAL ICONS */
+
+
+/* HERE START THE ROUNDED BORDERS OF TOP AND BOTTOM */
+#tako_nav .nav > li:first-child a:hover,#tako_nav .nav > li:first-child a {
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+#tako_nav .nav > li:last-child a:hover,#tako_nav .nav > li:last-child a {
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+}
+/* END OF THE ROUNDED BORDERS */
+
+/* SELECTED ITEM STYLE (YOU WILL NEED TO ADD THE CLASS="SELECTED" TO THE LI THAT YOU WANT TO ADD THE SELECTED STYLE ) */
+#tako_nav .nav li.selected a {
+    background:#7C8994;
+    color:#F7F7F1;
+}
+#tako_nav .nav li.selected i {
+    color:#F7F7F1;
+}
+
+/* -------- END OF ITEMS STYLE -------- */
+
+
+/* THIS IS THE FIRST RIGHT ARROW STYLE */
+ .first {
+    margin-right:10px;
+    padding-top:11px;
+    float:right;
+    font-size:28px;
+    color:#7C8994;
+}
+
+/* HERE START THE SECOND LEVEL OF THE MENU (SECOND COLUMN) */
+ul li ul.second-level {
+    display:none;
+    background:#eaeaea;
+    position:absolute;
+    width:160%;
+    /*width:auto;*/
+    min-width:100px;
+    margin-left:210px;
+    margin-top:-50px;
+    padding-left:0;
+}
+ul li ul.second-level a {
+    color:#616b74 !important;
+    background:#f2f3f1 !important;
+}
+.second_level_edit_page{
+	width:174%!important;
+	margin-left:183px!important;
+}
+.left_nav_part{
+	width:180px!important;
+}
+.mrss_feed_for_p p{
+	font-size:10px!important;
+}
+
+
+	ul li ul.second-level a, ul li ul.second-level p {
+		width:auto;
+		padding-left:20px;
+		height:50px;
+		line-height:50px;
+		display:block;
+		position:relative;
+		text-decoration:none;
+		/*text-transform:uppercase;*/
+		font-size:14px;
+		color:#686868;
+   -webkit-box-shadow:0 1px 0 rgba(0,0,0,.05);
+   -moz-box-shadow:0 1px 0 rgba(0,0,0,.05);
+        box-shadow:0 1px 0 rgba(0,0,0,.05);
+        margin:0;
+	
+	}
+
+		ul li ul.second-level p a{
+		padding-left:0;
+		display:inline-block;
+		box-shadow:none;
+	}
+
+			ul li ul.second-level a:last-child, ul li ul.second-level p:last-child {
+box-shadow:none;
+	
+	}
+
+
+
+ul li:hover .second-level {
+    display: inline-block;
+}
+ul li .second-level li {
+    list-style:none;
+}
+ul li .second-level li:hover > a {
+    background:#616b74 !important;
+    color:#F7F7F1 !important;
+}
+ul li .second-level li:hover i {
+    color:#F7F7F1;
+}
+ul li .second-level li:last-child a {
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+}
+ul li .second-level li a {
+    width:120px;
+}
+ul li .second-level li a:hover {
+    border-radius:0;
+}
+.second-level li:first-child a:hover, .second-level li:first-child a {
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+}
+
+/* -------- END OF THE SECOND LEVEL -------- */
+
+
+/* HERE START THE THIRD LEVEL OF THE MENU (THIRD COLUMN) */
+ ul li a i {
+    margin-right:10px;
+    padding-top:15px;
+    float:right;
+    font-family:'fontawesome';
+    font-size:20px;
+    color:#616b74;
+}
+ul.third-level {
+    padding-left: 0;
+    display:none;
+    background:#f2f3f1;
+    position:absolute;
+    width:100px;
+    margin-left:140px;
+    margin-top:-50px;
+}
+ul.third-level li a {
+    background:#f2f3f1;
+    color:#616b74;
+}
+ul.third-level li a:hover {
+    background:#616b74;
+    color:#f2f3f1;
+}
+ul li .second-level li:hover ul.third-level {
+    display:block;
+}
+
+/* -------- END OF THE THIRD LEVEL -------- */
+
+/* MENU BUTTON FOR RESPONSIVE */
+nav a#showmenu {
+    display: none;
+}
+
+/* START MEGA-MENU CONTENTS */
+
+/* WIDTH OF THE BODYS ACCORDIN TO THEIR TYPE */
+/* login */
+ #mega-menu .login {
+    min-width:220px;
+}
+/* register */
+ #mega-menu .register {
+    min-width:260px;
+}
+/* contact */
+ #mega-menu .contact {
+    min-width:280px;
+}
+
+/* HERE STARTS THE FORMS STYLES */
+#mega-menu form {
+    margin:0;
+}
+#mega-menu fieldset {
+    min-width:220px;
+    background-color: rgb(242, 243, 241);
+    border:none;
+}
+#mega-menu section {
+    margin:10px;
+}
+/* ICON STYLE FOR THE INPUT LABELS */
+#mega-menu form label {
+    background-color: #363b41;
+    border-radius: 3px 0px 0px 3px;
+    -moz-border-radius: 3px 0px 0px 3px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+    color: #606468;
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+}
+#mega-menu fieldset input {
+    border:none;
+    height:30px;
+}
+
+/* PLACEHOLDERS COLOR FOR EACH BROWSER */
+#mega-menu fieldset input:-moz-placeholder {
+    color: #bababa;
+}
+#mega-menu fieldset input::-webkit-input-placeholder {
+    color:#bababa;
+}
+#mega-menu fieldset input:focus::-webkit-input-placeholder {
+    color:#ffffff;
+}
+
+/* ICON STYLE FOR THE TEXTAREA LABEL */
+#mega-menu form label.textarea {
+    background-color: #363b41;
+    border-radius: 3px 0px 0px 3px;
+    -moz-border-radius: 3px 0px 0px 3px;
+    -webkit-border-radius: 3px 0px 0px 3px;
+    color: #606468;
+    display: inline-block;
+    float: left;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    width: 30px;
+}
+#mega-menu fieldset textarea {
+    vertical-align: middle;
+    font-family:'Helvetica';
+    min-height: 120px;
+    height: 120px;
+    font-size: 13px;
+    resize: none;
+    border:none;
+    padding:10px;
+    background-color: rgb(104, 104, 104);
+    border-radius: 0px 3px 3px 0px;
+    -moz-border-radius: 0px 3px 3px 0px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+    color: #fff;
+    width:83.9%;
+    padding-left:8px;
+}
+
+/* FORM VALIDATION: INPUT BACKGROUNDS WITH THEIR ICONS */
+#mega-menu fieldset textarea:focus {
+    background:#7C8994;
+}
+#mega-menu fieldset textarea:valid {
+    background:rgb(104, 104, 104) url(../images/valid_nofocus.png) no-repeat 96% center;
+    border:none;
+    box-shadow: none;
+}
+#mega-menu fieldset textarea:focus:valid {
+    background:#94d055 url(../images/valid_focus.png) no-repeat 96% center;
+}
+#mega-menu fieldset textarea:invalid {
+    background: rgb(104, 104, 104) url(../images/required.png) no-repeat 96% center;
+    border:none;
+    box-shadow: none;
+}
+#mega-menu fieldset textarea:focus:invalid {
+    background:#e45656 url(../images/invalid_focus.png) no-repeat 96% center;
+}
+
+/* END OF FORM VALIDATION BACKGROUNDS */
+
+#mega-menu fieldset input[type="email"], #mega-menu fieldset input[type="password"], #mega-menu fieldset input[type="text"] {
+    background-color: rgb(104, 104, 104);
+    border-radius: 0px 3px 3px 0px;
+    -moz-border-radius: 0px 3px 3px 0px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+    color: #fff;
+    width:83.9%;
+    padding-left:8px;
+}
+#mega-menu fieldset input[type="email"]:focus, #mega-menu fieldset input[type="password"]:focus, #mega-menu fieldset input[type="text"]:focus {
+    background:#7C8994;
+}
+#mega-menu fieldset input:required {
+    background: rgb(104, 104, 104) url(../images/required.png) no-repeat 96% center;
+    border:none;
+    box-shadow: none;
+}
+#mega-menu fieldset input:invalid {
+    background: rgb(104, 104, 104) url(../images/required.png) no-repeat 96% center;
+    border:none;
+    box-shadow: none;
+}
+#mega-menu fieldset input:valid {
+    background:rgb(104, 104, 104) url(../images/valid_nofocus.png) no-repeat 96% center;
+    border:none;
+    box-shadow: none;
+}
+#mega-menu fieldset input:optional {
+    background:rgb(104, 104, 104);
+    border:none;
+    box-shadow: none;
+}
+#mega-menu fieldset input[type="text"]:focus:optional, input[type="email"]:focus:optional {
+    background:#7C8994 !important;
+    border:none;
+    box-shadow: none;
+}
+#mega-menu fieldset input:focus:invalid {
+    background:#e45656 url(../images/invalid_focus.png) no-repeat 96% center;
+}
+#mega-menu fieldset input:focus:valid {
+    background:#94d055 url(../images/valid_focus.png) no-repeat 96% center;
+}
+
+/* SUBMIT BUTTON FOR ALL THE FORMS */
+#mega-menu fieldset input[type="submit"] {
+    -webkit-appearance: none;
+    background-color: #ff6781;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: 100px;
+}
+#mega-menu fieldset input[type="submit"]:hover {
+    background-color: #d25369;
+}
+
+/* TWO COLUMNS INPUTS FOR THE NAMES IN THE FORM */
+#mega-menu fieldset input.names {
+    width:34.3%;
+    float:left;
+    margin-right:3.2%;
+    margin-bottom: 10px;
+}
+#mega-menu fieldset input.names:first-child {
+    margin-right:0;
+}
+
+
+/* END OF THE FORMS BODIES */
+
+
+/* FORM VALIDATION TOOLTIPS (HINTS) STYLES */
+ .hint {
+    width: 165px;
+    background: #d45252;
+    margin-top: -3px;
+    color: white;
+    margin-left:12px;
+    padding: 3px 6px;
+    z-index: 999;
+    position: absolute;
+    display: none;
+    font-size: 12px;
+}
+.hint::before {
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid #d45252;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+textarea + .hint {
+    margin-top:43px;
+}
+input:focus + .hint {
+    display: inline;
+}
+input:optional:focus + .hint {
+    display: none;
+}
+input:required:valid + .hint {
+    display:none;
+}
+textarea:focus + .hint {
+    display: inline;
+}
+textarea:optional:focus + .hint {
+    display: none;
+}
+textarea:required:valid + .hint {
+    display:none;
+}
+
+/* START GENDER RADIO SELECTOR STYLE */
+ input[type=radio] {
+    /*visibility: hidden;*/
+    /*margin-left:-20%;*/
+}
+label[for=male]:hover, label[for=female]:hover {
+    background-color:#606468 !important;
+}
+input[type=radio]:checked + label[for=male], input[type=radio]:checked + label[for=female] {
+    background-color:#7c8994 !important;
+}
+label[for=gender] {
+    margin-bottom: 10px;
+    color:#bababa !important;
+    width:37% !important;
+    border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    margin-right:3% !important;
+}
+label[for=male], label[for=female] {
+    margin-bottom: 10px;
+    width:27.2% !important;
+    margin-right:2% !important;
+    color:#F7F7F1 !important;
+    background: #686868 !important;
+    border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+}
+
+/* START GALLERY CONTENT */
+ #mega-menu .gallery {
+    min-width: 470px;
+    margin:10px 25px;
+}
+#mega-menu .gallery img {
+    margin:10px;
+    border:7px solid #f2f3f1;
+    float:left;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* -------- END OF THE MEGA-MENU CONTENT -------- */
+
+
+/* HERE STARTS THE RESPONSIVE DESIGN */
+@media screen and (max-width:320px) {
+
+    #tako_nav ul.nav {
+    width:304px;
+    display: none;
+    height: auto;
+    margin-left: 0px;
+}
+ul li ul.second-level {
+    position:relative;
+    width:254px;
+    margin-left:0;
+    margin-top:0;
+}
+ul li ul.second-level a {
+    height: 32px;
+    line-height: 32px;
+    width:284px;
+    -webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .7);
+    -moz-box-shadow:0 1px 0 rgba(0, 0, 0, .7);
+    box-shadow:0 1px 0 rgba(0, 0, 0, .7);
+}
+ul li ul.second-level li:last-child a {
+    -webkit-box-shadow:0 1px 0 rgba(0, 0, 0, 0.05);
+    -moz-box-shadow:0 1px 0 rgba(0, 0, 0, 0.05);
+    box-shadow:0 1px 0 rgba(0, 0, 0, 0.05);
+}
+ul li ul li {
+    z-index:999;
+    opacity:0.9;
+}
+ul.third-level {
+    z-index:99999;
+    width: 304px;
+    background:#000;
+    position: relative;
+    margin-left:0px;
+    margin-top:0;
+}
+ul li ul li ul li:last-child a {
+    -webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .7);
+    -moz-box-shadow:0 1px 0 rgba(0, 0, 0, .7);
+    box-shadow:0 1px 0 rgba(0, 0, 0, .7);
+}
+.first, ul li a i {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+}
+.first {
+    padding-top:21px;
+}
+/* NO ROTATION STYLE FOR LEFT ARROW (OR ANY ICON) IN RESPONSIVE */
+.no-rotate {
+    padding-top:11px;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+}
+ul li a i {
+    padding-top:12px;
+}
+/* WIDTH FOR THE MEGA-MENU CONTETS BODIES */
+ #mega-menu .login, #mega-menu .register, #mega-menu .contact {
+    min-width:278px;
+    width:278px;
+    max-width:278px;
+}
+#mega-menu a {
+    -webkit-box-shadow:0 1px 0 rgba(0, 0, 0, .1);
+    -moz-box-shadow:0 1px 0 rgba(0, 0, 0, .1);
+    box-shadow:0 1px 0 rgba(0, 0, 0, .1);
+}
+#mega-menu iframe.video {
+    width: 304px;
+    height: 171px;
+}
+#mega-menu .gallery img {
+    float:none;
+}
+
+/* SHOW MENU BUTTON TO TOGGLE THE MENU IN RESPONSIVE */
+nav a#showmenu {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom:15px;
+    line-height: 35px;
+    display: block;
+    background-color: #283744;
+    width: 290px;
+    position: relative;
+    color:#f2f3f1;
+    text-decoration: none;
+    height: 35px;
+    padding-left: 15px;
+}
+nav a#showmenu i {
+    line-height: 35px;
+    float:right;
+    padding-right: 15px;
+}
+
+ }
+
+
+
+
+
+
+
+	

@@ -1,0 +1,61 @@
+<component name = "RowListItem" extends = "Group" >
+
+  <interface >
+    <field id = "itemContent" type = "node" onChange = "showcontent" />
+    <field id = "focusPercent" type = "float" onChange = "showfocus" />
+    <field id = "rowFocusPercent" type = "float" onChange = "showrowfocus" />
+  </interface>
+
+  <script type = "text/brightscript" >
+
+    <![CDATA[
+
+    sub init()
+      m.itemposter = m.top.findNode("itemPoster")
+      m.itemmask = m.top.findNode("itemMask")
+    end sub
+
+    sub showcontent()
+      itemcontent = m.top.itemContent
+      m.itemposter.uri = itemcontent.HDPosterUrl
+    end sub
+
+    sub showfocus()
+      scale = 1 + (m.top.focusPercent * 0.45)
+      m.itemposter.scale = [scale, scale]
+
+    end sub
+
+    sub showrowfocus()
+      m.itemmask.opacity = 0.75 - (m.top.rowFocusPercent * 0.75)
+    end sub
+
+    ]]>
+
+  </script>
+
+  <children >
+
+    <Poster
+      id = "itemPoster"
+      translation = "[ 50, 50 ]"
+      width = "262"
+      height = "147"
+      scaleRotateCenter = "[ 131.0, 73.5 ]" >
+
+      <Rectangle
+        id = "itemMask"
+        translation = "[ 50, 30 ]"
+        width = "262"
+        height = "147"
+        scaleRotateCenter = "[ 131.0, 73.5 ]"
+        color = "0x101010FF"
+        opacity = "0.75" />
+
+    </Poster>
+
+
+
+  </children>
+
+</component>

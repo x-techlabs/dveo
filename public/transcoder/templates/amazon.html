@@ -1,0 +1,170 @@
+<div class="jumbotron">
+        <div class="container">
+        <div class="navbar-header">
+         <ul class="nav navbar-nav navbar-center" >
+             <li><button type="button" class="btn btn-primary active navbar-btn" onclick="location.href='#/amazons3'">Amazon S3</button></li>
+             <li><button type="button" class="btn btn-default navbar-btn" onclick="location.href='#/upload'">Upload</button></li>
+             <li><button type="button" class="btn btn-default navbar-btn" onclick="location.href='#/transcode'">Transcode</button></li>
+             <li><button type="button" class="btn btn-default navbar-btn">Queue</button></li>
+             <li><button type="button" class="btn btn-default navbar-btn" onclick="location.href='#/selftest'">Self Test</button></li>
+             <li><button type="button" class="btn btn-default navbar-btn" onclick="location.href='#/login'">Logout</button></li>
+        </ul>
+        </div> 
+      </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+        <div> <h2> Amazon User </h2></div>
+        <table class="table tablebordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                        <td>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'name'">Choose</a> 
+                        
+                            <span ng-show="sort == 'name'" class="caret"></span>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'userID'">Name</a>
+                        
+                            <span ng-show="sort == 'userID'" class="caret"></span> 
+                        </td>
+                        <td>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'role'">Access Key</a>
+                        
+                            <span ng-show="sort == 'role'" class="caret"></span> 
+                        </td>
+                        <td>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'rateplan'">Secret Key</a>    
+                        
+                            <span ng-show="sort == 'rateplan'" class="caret"></span> 
+                        </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                         <td><label>&nbsp&nbsp<input type="checkbox" checked></label></td>
+                         <td>Robin R</td>
+                         <td><input id="password" required type="password" placeholder="********************" ng-model="login.password" /></td>
+                         <td><input id="password" required type="password" placeholder="***************************************" ng-model="login.password" /></td>
+                         </tr>
+                         <tr>
+                         <td><label>&nbsp&nbsp<input type="checkbox"></label></td>
+                         <td>Test Suite</td>
+                         <td><input id="password" required type="password" placeholder="********************" ng-model="login.password" /></td>
+                         <td><input id="password" required type="password" placeholder="***************************************" ng-model="login.password" /></td>
+                         </tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="col-md-4">
+            <div> <h2> Buckets </h2></div>
+             <table class="table tablebordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                        <td>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'name'">View</a> 
+                        
+                            <span ng-show="sort == 'name'" class="caret"></span>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'userID'">Buckets</a>
+                        
+                            <span ng-show="sort == 'userID'" class="caret"></span> 
+                        </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr >
+                         <td><label>&nbsp&nbsp<input type="checkbox" checked></label></td>
+                         <td>phase-1-testsuite</td>
+                         </tr>
+                         <tr>
+                         <tr >
+                         <td><label>&nbsp&nbsp<input type="checkbox" ></label></td>
+                         <td>my-clips</td>
+                         </tr>
+                         <tr>    
+                    </tbody>
+                </table>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-md-6">
+            <div> <h2> Media </h2></div>
+            <table class="table tablebordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                        <td>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'name'">Media</a> 
+                        
+                            <span ng-show="sort == 'name'" class="caret"></span>
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'userID'">Original</a>
+                        
+                            <span ng-show="sort == 'userID'" class="caret"></span> 
+                        </td>
+                        <td>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'role'">1280</a>
+                        
+                            <span ng-show="sort == 'role'" class="caret"></span> 
+                        </td>
+                        <td>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'rateplan'">720</a>    
+                        
+                            <span ng-show="sort == 'rateplan'" class="caret"></span> 
+                        </td>
+                        <td>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle" ng-click="sort = 'rateplan'">404</a>    
+                        
+                            <span ng-show="sort == 'rateplan'" class="caret"></span> 
+                        </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                         <td><label>&nbsp&nbsp<input type="checkbox" checked></label></td>
+                         <td>12-YEARS-A-SLAVE-Trailer.mp4<input id="uactive" type="radio" ng-model="subscriber.authorize" value="active" checked="checked"></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         </tr>
+                         <tr>
+                         <td><label>&nbsp&nbsp<input type="checkbox" ></label></td>
+                         <td>A-Beautiful-Mind.mp4<input id="uactive" type="radio" ng-model="subscriber.authorize" value="active"></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         </tr>
+                         <tr>
+                         <td><label>&nbsp&nbsp<input type="checkbox" ></label></td>
+                         <td>Cars-2-Theatrical-Trailer.mp4<input id="uactive" type="radio" ng-model="subscriber.authorize" value="active"></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         </tr>
+                         <tr>
+                         <td><label>&nbsp&nbsp<input type="checkbox" ></label></td>
+                         <td>Deception-Official-Trailer.mp4<input id="uactive" type="radio" ng-model="subscriber.authorize" value="active"></td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         </tr>
+                    </tbody>
+                    </table>
+        </div>
+     <div class="col-md-6">
+            <div> <h2> Encoding </h2> </div>
+        <div class="panel panel-default">
+                <div class="panel-heading"> Name : 12-YEARS-A-SLAVE-Trailer.mp4 </div>
+                <div class="panel-body">    
+                                        Duration : 00:02:29:65 </br>
+                                        Bitrate : 1157kbps </br>
+                                        Width x height : 1280 x 534 </br>
+                                        File Size : 20.6 Mb 
+                </div>
+            </div>
+    </div>
+     </div>
+</div>
+</div>

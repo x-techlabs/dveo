@@ -1,0 +1,35 @@
+version: '2'
+services:
+  1studio_db:
+    image: mysql
+    container_name: 1studio_mysql
+    environment:
+      - MYSQL_DATABASE=laravel
+      - "MYSQL_ROOT_PASSWORD=${DB_PASSWORD}"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+
+  1studio_redis:
+    image: redis
+    container_name: 1studio_redis
+    volumes:
+      - ./data/redis:/var/lib/redis
+
+  1studio_laravel:
+    image: "1studio_laravel:${BUILD_TAG}"
+    environment:
+      - "DATABASE_PASSWORD=${DB_PASSWORD}"
+      - NODE_ENV=production
+    build:
+      context: ..
+    depends_on:
+      - 1studio_db
+    container_name: 1studio_laravel
+    links:
+      - 1studio_db
+      - 1studio_redis
+    restart: always
+    volumes:
+      - ../:/var/www
+    ports:
+      - '80:80'

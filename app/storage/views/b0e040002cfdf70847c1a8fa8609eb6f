@@ -1,0 +1,201 @@
+<?php $__env->startSection('content'); ?>
+
+<?php if(isset($videos)): ?>
+
+<?php echo HTML::script('js/videos/script.js'); ?>
+
+<style type="text/css">
+    #stype_for_design{
+        float:left;
+        border:4px solid red;
+        margin-left:0px!important;
+    }
+
+</style>
+<div class="row center-block list-wrap" id="contnet-wrap">
+    <div class="col-md-12 content" id="videos-col">
+	
+        <?php echo Form::open(array('url' => '/channel_' . BaseController::get_channel_id() . '/videos', 'class' => 'form-horizontal', 'name' => 'videoList', 'method' => 'get')); ?>
+
+
+        <div class="title-name" style="display: block;">
+            <!-- <i class="fa fa-video-camera"></i>
+            <div class="title">Videos</div> -->
+            &nbsp;<?php echo Form::select('stype', [
+               '0' => 'Recent',
+               '2' => 'Old At Top',
+               '1' => 'Alphabetical'
+               ],
+			   $stype,
+			   array('id' => 'stype', 'onchange' => 'OnSortChanged()')
+			); ?>
+
+            <?php echo Form::hidden('search', '', array('id' => 'videoSearch')); ?>
+
+<!--
+            <div class="input-group" style='float:left;width:40%;padding-left:20px;'>
+                <?php echo Form::text('search', $search, array('class' => 'form-control', 'placeholder' => 'Search', 'id' => 'videoSearch')); ?>
+
+                <span class="input-group-btn">
+                    <button type="submit" class="btn"><span class="fui-search"></span></button>
+                </span>
+            </div>
+-->
+            <a href="../channel_<?php echo $channel['id']; ?>/upload" class="btn btn-block btn-lg greenActionBtn plusPtnVid" title="Upload video">&plus; Upload video</a>
+            <?php /*<a href="../channel_<?php echo $channel['id']; ?>/uploadLink" class="btn btn-block btn-lg greenActionBtn plusPtnVid" title="Upload video">&plus; Link Video</a>*/ ?>
+            <div class="clear"></div>
+        </div>
+        <?php echo Form::close(); ?>
+
+
+        <div class="row center-block list content_list" id="container_content">
+            <div class="col-md-12 searchHide height" id="myScroller">
+                <?php foreach($videos as $key => $video): ?>
+
+                    <section id='vsec_<?php echo $key; ?>' index='<?php echo $video->id; ?>' data-video_id="<?php echo $video->id; ?>" class="list_item section_video" style="position: relative;">
+
+                        <!-- Edit Delete Buttons -->
+                        <button id="<?php echo $video->id; ?>" class="delete_video editDelete fr btn btn-block btn-lg btn-danger" title="Delete video">
+                            <span class="fui-trash"></span>
+                        </button>
+                        <button id="<?php echo $video->id; ?>" class="edit_video editDelete fr btn btn-block btn-lg btn-inverse" title="Edit video">
+                            <span class="fui-new"></span>
+                        </button>
+<!--                        <img class="snapshot section_video" data-video_id="<?php echo $video->id; ?>" src='<?php echo URL::to('/'); ?>/images/snapshot.png'>  -->
+                        <?php if($video->source !== 'vimeo'): ?>
+                            <span class="snapshot section_video" data-video_id="<?php echo $video->id; ?>"><i class="fa fa-camera-retro fa-3x"></i></span>
+
+                        <?php endif; ?>
+                        <!-- Onclick event for class playVideoInPopup is defined in template.blade.php and it looks for attribute video_id -->
+                        <span class="snapshot playVideoInPopup <?php echo $video->source == 'vimeo' ? 'noSnap' : ''; ?>" video_id="<?php echo $video->id; ?>"><i class="fa fa-play fa-lg"></i></span>
+
+                        <div class="clear"></div>
+
+                        <div class="row center-block">
+                            <div class="col-md-2">
+                                <?php if($video->thumbnail_name == null): ?>
+                                    In process ...
+                                <?php else: ?>
+                                    <img data="<?php echo (!empty($video->custom_poster)) ? 'https://s3.amazonaws.com/aceplayout/banners/'.$video->custom_poster : $video->thumbnail_name; ?>" src="" class="thumbnail_video" style='width:100%;'>  <!-- vinay added style -->
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="col-md-10">
+                                <h1 class="videoTtitle"><?php echo $video->title; ?></h1>
+                                <span class="duration">
+                                    <img src="/images/time_icon.png" style="margin-top: -4px;"> <?php echo $video->time; ?>
+
+                                    <span class="master_looped">&nbsp;|&nbsp;<?php echo $video->mb_file_name; ?></span>
+                                    <?php if($video->source == 'vimeo'): ?>
+                                        <img src="/images/vimeo_icon.png" class="vimeoIcon">
+                                    <?php endif; ?>
+                                </span>
+								<?php if($channel['display_show'] == 1): ?>
+                                <div class="custom_options">
+									<?php if(count($video->shows) > 0): ?>
+										<span class="custom_option"><b>Show:</b>
+											<?php foreach($video->shows as $show): ?>
+												<span class="show_name">
+													<?php echo $show->show_names->name; ?>
+
+												</span>
+											<?php endforeach; ?>
+										</span>
+									<?php endif; ?>
+                                    <span class="custom_option"><b>Season:</b> <?php echo $video->season; ?></span>
+                                    <span class="custom_option"><b>Episode:</b> <?php echo $video->episode; ?></span>
+                                </div>
+								<?php endif; ?>
+                                <!-- <div><?php echo $video->storage; ?></div>  -->
+                            </div>
+                        </div>
+                        <div class=" <?php echo empty($video->job_id) ? 'section-overlay-hidden' : 'section-overlay'; ?> " >
+                            <div class="wait_text">
+                                Processing...
+                            </div>
+                            <div class="loader">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                    </section>
+                <?php endforeach; ?>
+            </div>
+            <div class="searchAppend col-md-12"></div>
+        </div>
+    </div>
+</div>
+
+<script language='javascript'>
+
+function LoadImages()
+{
+    var posters =  document.getElementsByClassName("thumbnail_video");
+    for(i = 0 ; i < posters.length ; i++)
+    {
+        url = posters[i].getAttribute('data');
+
+        math_random = Math.floor(Math.random() * 10000);
+
+        random_string = 'rnd='+math_random+'&w=266&h=150&fit=crop&crop=entropy&auto=format,enhance&q=60';
+
+        url = url.replace('w=266&h=150&fit=crop&crop=entropy&auto=format,enhance&q=60',random_string);
+
+        if (url != '') posters[i].src = url;
+    }
+}
+
+function ScrollIntoView(id)
+{  
+    if (id==0) return;
+
+    var ofst = 0;
+    o1 = 0;
+    for (i = 1 ; i < 9999 ; i++)
+    {
+        var obj = document.getElementById('vsec_'+i);
+        if (obj==null) break;
+        
+        mid = obj.getAttribute('index');
+        if (mid != id) 
+        {
+            o1 += $('#vsec_'+i).outerHeight();
+            continue;
+        }
+        document.getElementById('myScroller').scrollTop = o1;
+        return;
+    } 
+}
+
+window.onload = function() 
+{  
+    LoadImages();  
+    window.setTimeout('ScrollIntoView( <?php echo $scrollToVideo; ?> )', 1000);
+}
+
+function OnSortChanged()
+{
+    document.videoList.submit();
+}
+
+function OnSearch(searchStr)
+{
+    document.getElementById('videoSearch').value = searchStr;
+    document.videoList.submit();
+}
+
+</script>
+<script>
+  window.NickelledMissionDockSettings = {
+    missionDockId: 129,
+    userId: <?php echo $channel['id']; ?>
+
+  };
+
+  (function(){var NickelledMissionDock=window.NickelledMissionDock=NickelledMissionDock||{};NickelledMissionDock.preloadEvents=[];NickelledMissionDock.show=function(){NickelledMissionDock.preloadEvents.push('show')};NickelledMissionDock.hide=function(){NickelledMissionDock.preloadEvents.push('hide')};var loadMD=function(){var s,f;s=document.createElement("script");s.async=true;s.src="https://cdn.nickelled.com/mission-dock.min.js";f=document.getElementsByTagName("script")[0];f.parentNode.insertBefore(s,f);};loadMD();NickelledMissionDock.show();})();
+</script>
+<?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('template.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<!--
+    main node which handles home screen children
+    -->
+<component name="MetadataBox" extends="Group">
+
+    <interface>
+        <field id="title" type="string" alias="titleLabel.text" />
+        <field id="description" type="string" alias="descriptionLabel.text" />
+    </interface>
+
+    <children>
+        <Poster
+            uri="pkg:/images/metadatabg.png"
+            width="467"
+            height="256"
+            />
+
+        <Label
+            id="titleLabel"
+            visible="true"
+            text="Long Description"
+            width="400"
+            wrap="false"
+            translation="[30,30]"
+            font = "font:SmallBoldSystemFont"
+            color="0x000000" />
+
+        <Label
+            id="descriptionLabel"
+            visible="true"
+            text="Long Description Long DescriptionLong DescriptionLong DescriptionLong DescriptionLong DescriptionLong DescriptionLong DescriptionLong Description "
+            width="400"
+            wrap="true"
+            maxLines="4"
+            translation="[30, 80]"
+            color="0x000000"
+            font = "font:SmallestSystemFont" />
+    </children>
+</component>

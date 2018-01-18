@@ -1,0 +1,93 @@
+/*global css*/
+.right-side {
+    margin-left : 0;
+}
+/*page level*/
+.horizontal_menu {
+    border-bottom    : 0;
+    padding          : 0 10%;
+}
+.slimmenu .has-submenu .menu-list {
+    font-weight: 600;
+    color: #fff;
+	text-align: center;
+	padding: 12px 30px 10px 16px;
+}
+
+.slimmenu .has-submenu .active {
+    background: #48CFAD;
+    color: #fff;
+}
+ul.slimmenu > li {
+    width : 13.4%;
+}
+ul.slimmenu li > ul {
+    padding-left : 0;
+}
+ul.slimmenu li .sub-toggle {
+    background : none;
+	width: 35px;
+}
+ul.slimmenu li ul {
+    top    : 102%;
+    border : 1px solid #dcdcdc;
+}
+ul.slimmenu li ul li a {
+    padding : 12px 10px;
+    width   : 100%;
+}
+ul.slimmenu{
+    background: #474747;
+}
+ul.slimmenu li a,ul.slimmenu li .sub-toggle>i{
+    color:#fff;
+}
+ul.slimmenu li ul li, ul.slimmenu li {
+    background : #474747;
+}
+ul.slimmenu li a:hover {
+    background : #5f5f5f;
+}
+ul.slimmenu li a.sub-list:hover,ul.slimmenu li.has-submenu ul li a:hover {
+    background: #fff;
+    color:#333;
+}
+.slimmenu .has-submenu .sub-list {
+    font-size : 16px !important;
+}
+.slimmenu .has-submenu ul li a {
+    font-size : 14px !important;
+	font-weight: 600;
+}
+#navigation .has-submenu ul li {
+    width         : 100%;
+    border-bottom : 1px solid #eeeeee;
+}
+/*for smaller screens hemburger*/
+.menu-collapser {
+    color            : #555;
+    border           : 1px solid #ccc;
+    border-radius    : 4px;
+    background-color : #f5f5f5;
+    margin           : 5px;
+}
+ul.collapsed {
+    border : 1px solid #ccc;
+}
+.Sample_placehold {
+    width : 100%;
+}
+@media screen and (min-width : 993px) {
+    .main-menu:after {
+        content          : '';
+        height           : 70%;
+        width            : 2px;
+        position         : absolute;
+        right            : 0;
+        top              : 15%;
+        background-color : #e5e5e5;
+    }
+    .option-one {
+        width : 17% !important;
+    }
+}

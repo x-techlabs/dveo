@@ -1,0 +1,14 @@
+.scrollable {
+    text-align: center;
+    height: 143%;
+    overflow-y: scroll;
+}
+
+#container_content {
+    /*height: 78%;*/
+}
+
+.z-index {
+    z-index: 100000;
+    position: relative;
+}

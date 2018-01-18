@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<!-- node that renders Grid Screen
+    handles bookmark buttons
+    handles start of video playback
+ -->
+<component name="ListScreen" extends="Group" initialFocus="RowList">
+    <interface>
+        <!-- Grid Content Node -->
+        <field id="content" type="node" alias="RowList.content" onChange="onContentChange"/>
+
+        <!-- Row item selection handler -->
+        <field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="RowList.rowItemSelected"/>
+
+        <!-- Row item focused handler -->
+        <field id="itemFocused" type="intarray" alias="RowList.rowItemFocused" onChange="OnItemFocused"/>
+
+        <!-- Interface to focused item (Content Node) -->
+        <field id="focusedContent"  type="node"/>
+        <field id="title" type="string" alias="menutitle.text" />
+    </interface>
+
+    <!-- main handler -->
+    <script type="text/brightscript" uri="pkg:/components/screens/ListScreen/ListScreen.brs" />
+
+    <children>
+        <Label
+          id="menutitle"
+          translation="[800, 65]"
+          font="font:SmallSystemFont"
+          text=""
+          width="250"
+          wrap="false"
+          />
+        <Label
+          translation="[1060, 65]"
+          font="font:SmallSystemFont"
+          text="|"
+          />
+        <RowList
+            id="RowList"
+            itemComponentName = "RowListItem"
+      			translation="[0, 150]"
+      			itemSize="[1280, 430]"
+            rowHeights="[430]"
+            rowCounterRightOffset = "100"
+      			numRows="1"
+      			itemSpacing="[13, 0]"
+      			focusXOffset="[470, 200]"
+      			rowFocusAnimationStyle="fixedFocusWrap"
+            vertFocusAnimationStyle = "fixedFocusWrap"
+            drawFocusFeedback = "false"
+      			rowItemSize="[[300, 210]]"
+      			rowItemSpacing="[[35, 15]]"
+      			showRowCounter="true"
+            />
+        <Label
+          id="listFocusTitle"
+          translation="[0, 500]"
+          width = "1280"
+          wrap = "false"
+          horizAlign = "center"
+          font="font:MediumBoldSystemFont"
+          />
+        <Label
+          id="listFocusDescription"
+          translation="[140, 550]"
+          width = "1000"
+          wrap = "true"
+          maxLines = "3"
+          horizAlign = "center"
+          font="font:SmallSystemFont"
+          />
+
+    </children>
+</component>

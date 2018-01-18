@@ -1,0 +1,679 @@
+.:
+total 1140
+-rw-r--r-- 1 root root      0 Oct 21 01:30 out.txt
+drwxrwxrwx 2 root root   4096 Oct 16 23:19 upload
+drwxrwxrwx 2 root root   4096 Sep 29 23:25 index
+drwxrwxrwx 2 root root   4096 Sep 29 23:20 tvapp
+drwxrwxrwx 2 root root   4096 Sep 29 23:19 videos
+drwxrwxrwx 2 root root   4096 Jul  9 03:36 tvweb
+drwxrwxrwx 3 root root   4096 Jun  2 03:20 flowplayer605
+drwxrwxrwx 5 root root   4096 Jun  1 16:16 flowplayer6snapshot604
+drwxrwxrwx 5 root root   4096 May 28 13:12 videojs_snapshot_580
+-rwxrwxrwx 1 root root 522864 May 21 04:02 flat-ui.js
+drwxrwxrwx 2 root root   4096 May 11 20:05 playlist
+drwxrwxrwx 2 root root   4096 May  7 01:19 stream
+drwxrwxrwx 2 root root   4096 May  7 01:19 settings
+drwxrwxrwx 2 root root   4096 May  7 01:19 schedule
+drwxrwxrwx 2 root root   4096 May  7 01:19 playout
+-rwxrwxrwx 1 root root   3149 May  7 01:19 path.min.js
+-rwxrwxrwx 1 root root  55527 May  7 01:19 panda-uploader.min.js
+-rwxrwxrwx 1 root root   2118 May  7 01:19 misc.js
+drwxrwxrwx 2 root root   4096 May  7 01:19 jQuery_UI
+drwxrwxrwx 2 root root   4096 May  7 01:19 jquery_file_upload
+-rwxrwxrwx 1 root root   7830 May  7 01:19 jquery.transit.min.js
+-rwxrwxrwx 1 root root 135278 May  7 01:19 jquery-ui.js
+-rwxrwxrwx 1 root root  84245 May  7 01:19 jquery-2.1.1.min.js
+-rwxrwxrwx 1 root root      0 May  7 01:19 index_timeline.js
+drwxrwxrwx 2 root root   4096 May  7 01:19 d3-timeline
+drwxrwxrwx 2 root root   4096 May  7 01:18 collections
+drwxrwxrwx 2 root root   4096 May  7 01:18 channels
+-rwxrwxrwx 1 root root  31819 May  7 01:18 bootstrap.min.js
+-rwxrwxrwx 1 root root  60681 May  7 01:18 bootstrap.js
+-rwxrwxrwx 1 root root  36246 May  7 01:18 bootstrap-datetimepicker.min.js
+-rwxrwxrwx 1 root root  58293 May  7 01:18 bootstrap-datetimepicker.js
+-rwxrwxrwx 1 root root  54318 May  7 01:18 bootstrap-datepicker.js
+-rwxrwxrwx 1 root root   8740 May  7 01:18 bootbox.min.js
+drwxrwxrwx 2 root root   4096 May  7 01:18 admin
+-rwxrwxrwx 1 root root   2226 May  7 01:18 ace.js
+
+./upload:
+total 8
+-rwxrwxrwx 1 root root 6406 May  7 01:19 script.js
+
+./index:
+total 48
+-rw-r--r-- 1 root root 25340 Oct  6 02:24 script.js
+-rwxrwxrwx 1 root root 18115 Sep 11 02:11 script_2016_9_30.js
+-rwxrwxrwx 1 root root     0 May  7 01:19 ace.js
+
+./tvapp:
+total 24
+-rw-r--r-- 1 root root 4078 Sep 29 23:20 tvapp_add_playlist.js
+-rwxrwxrwx 1 root root 5867 Sep 11 02:04 tvapp_add_playlist_2016_9_30.js
+-rwxrwxrwx 1 root root 6716 Jul  7 00:54 script.js
+-rwxrwxrwx 1 root root 3027 May 11 20:10 drag_and_drop.js
+
+./videos:
+total 20
+-rw-r--r-- 1 root root 4143 Sep 29 23:19 drag_and_drop.js
+-rwxrwxrwx 1 root root 3129 Jun 12 15:54 get_video_desc.js
+-rwxrwxrwx 1 root root 2132 Jun 12 13:27 script.js
+-rwxrwxrwx 1 root root 3018 May  7 01:19 drag_and_drop_2016_9_30.js
+
+./tvweb:
+total 20
+-rwxrwxrwx 1 root root 5748 Jul 10 16:40 tvweb_add_playlist.js
+-rwxrwxrwx 1 root root 6716 Jul  8 20:40 script.js
+-rwxrwxrwx 1 root root 3027 Jul  8 20:39 drag_and_drop.js
+
+./flowplayer605:
+total 448
+-rwxrwxrwx 1 root root   1332 Jun  2 04:16 index.html
+drwxrwxrwx 4 root root   4096 Jun  2 03:21 skin
+-rwxrwxrwx 1 root root   3104 Jan 15  2016 embed.min.js
+-rwxrwxrwx 1 root root 247027 Jan 15  2016 flowplayer.js
+-rwxrwxrwx 1 root root 103109 Jan 15  2016 flowplayer.min.js
+-rwxrwxrwx 1 root root   8883 Jan 15  2016 license.txt
+-rwxrwxrwx 1 root root     76 Jan 15  2016 README
+-rwxrwxrwx 1 root root  57767 Jan 15  2016 flowplayerhls.swf
+-rwxrwxrwx 1 root root  10182 Jan 15  2016 flowplayer.swf
+
+./flowplayer605/skin:
+total 212
+drwxrwxrwx 2 root root   4096 Jun  2 03:21 img
+drwxrwxrwx 2 root root   4096 Jun  2 03:21 fonts
+-rwxrwxrwx 1 root root 101529 Jan 15  2016 all-skins.css
+-rwxrwxrwx 1 root root  34598 Jan 15  2016 functional.css
+-rwxrwxrwx 1 root root  31530 Jan 15  2016 minimalist.css
+-rwxrwxrwx 1 root root  36795 Jan 15  2016 playful.css
+
+./flowplayer605/skin/img:
+total 132
+-rwxrwxrwx 1 root root   742 Jan 15  2016 black.png
+-rwxrwxrwx 1 root root   737 Jan 15  2016 black_rtl.png
+-rwxrwxrwx 1 root root  1219 Jan 15  2016 black_rtl@x2.png
+-rwxrwxrwx 1 root root  1218 Jan 15  2016 black@x2.png
+-rwxrwxrwx 1 root root  1269 Jan 15  2016 flowplayer@2x.png
+-rwxrwxrwx 1 root root   636 Jan 15  2016 flowplayer.png
+-rwxrwxrwx 1 root root  4020 Jan 15  2016 play_black.png
+-rwxrwxrwx 1 root root   781 Jan 15  2016 play_black_rtl.png
+-rwxrwxrwx 1 root root  1552 Jan 15  2016 play_black_rtl@x2.png
+-rwxrwxrwx 1 root root 12700 Jan 15  2016 play_black@x2.png
+-rwxrwxrwx 1 root root  1409 Jan 15  2016 playful_black.png
+-rwxrwxrwx 1 root root  1404 Jan 15  2016 playful_black_rtl.png
+-rwxrwxrwx 1 root root  3632 Jan 15  2016 playful_black_rtl@x2.png
+-rwxrwxrwx 1 root root  3665 Jan 15  2016 playful_black@x2.png
+-rwxrwxrwx 1 root root  1414 Jan 15  2016 playful_white.png
+-rwxrwxrwx 1 root root  1409 Jan 15  2016 playful_white_rtl.png
+-rwxrwxrwx 1 root root  3659 Jan 15  2016 playful_white_rtl@x2.png
+-rwxrwxrwx 1 root root  3684 Jan 15  2016 playful_white@x2.png
+-rwxrwxrwx 1 root root  3679 Jan 15  2016 play_white.png
+-rwxrwxrwx 1 root root  3843 Jan 15  2016 play_white_rtl.png
+-rwxrwxrwx 1 root root 10149 Jan 15  2016 play_white_rtl@x2.png
+-rwxrwxrwx 1 root root  9786 Jan 15  2016 play_white@x2.png
+-rwxrwxrwx 1 root root   554 Jan 15  2016 white.png
+-rwxrwxrwx 1 root root   549 Jan 15  2016 white_rtl.png
+-rwxrwxrwx 1 root root   934 Jan 15  2016 white_rtl@x2.png
+-rwxrwxrwx 1 root root   930 Jan 15  2016 white@x2.png
+
+./flowplayer605/skin/fonts:
+total 20
+-rwxrwxrwx 1 root root 3128 Jan 15  2016 fpicons.eot
+-rwxrwxrwx 1 root root 7463 Jan 15  2016 fpicons.svg
+-rwxrwxrwx 1 root root 2964 Jan 15  2016 fpicons.ttf
+-rwxrwxrwx 1 root root 3040 Jan 15  2016 fpicons.woff
+
+./flowplayer6snapshot604:
+total 32
+drwxrwxrwx 4 root root 4096 Jun  1 16:16 server
+drwxrwxrwx 4 root root 4096 Jun  1 16:16 dist
+drwxrwxrwx 4 root root 4096 Jun  1 16:16 demo
+-rwxrwxrwx 1 root root   25 May 12 11:24 1stud.io.txt
+-rwxrwxrwx 1 root root 3536 Mar  3  2016 README.txt
+-rwxrwxrwx 1 root root 9201 Oct 28  2015 LICENSE.txt
+
+./flowplayer6snapshot604/server:
+total 8
+drwxrwxrwx 7 root root 4096 Jun  1 16:16 php5
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 asp.net
+
+./flowplayer6snapshot604/server/php5:
+total 24
+drwxrwxrwx 4 root root 4096 Jun  1 16:16 vendor
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 public
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 module
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 data
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 config
+-rwxrwxrwx 1 root root 1854 Nov 26  2012 init_autoloader.php
+
+./flowplayer6snapshot604/server/php5/vendor:
+total 16
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 composer
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 bin
+-rwxrwxrwx 1 root root  182 Nov 26  2012 autoload.php
+-rwxrwxrwx 1 root root   73 Nov 26  2012 README.md
+
+./flowplayer6snapshot604/server/php5/vendor/composer:
+total 28
+-rwxrwxrwx 1 root root  136 Nov 26  2012 autoload_classmap.php
+-rwxrwxrwx 1 root root  280 Nov 26  2012 autoload_namespaces.php
+-rwxrwxrwx 1 root root 1216 Nov 26  2012 autoload_real.php
+-rwxrwxrwx 1 root root 5581 Nov 26  2012 ClassLoader.php
+-rwxrwxrwx 1 root root 4587 Nov 26  2012 installed.json
+
+./flowplayer6snapshot604/server/php5/vendor/bin:
+total 0
+
+./flowplayer6snapshot604/server/php5/public:
+total 12
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 snapshots
+-rwxrwxrwx 1 root root  214 Nov 28  2012 crossdomain.xml
+-rwxrwxrwx 1 root root  304 Nov 26  2012 index.php
+
+./flowplayer6snapshot604/server/php5/public/snapshots:
+total 0
+
+./flowplayer6snapshot604/server/php5/module:
+total 4
+drwxrwxrwx 6 root root 4096 Jun  1 16:16 Application
+
+./flowplayer6snapshot604/server/php5/module/Application:
+total 20
+drwxrwxrwx 5 root root 4096 Jun  1 16:16 view
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 src
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 language
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 config
+-rwxrwxrwx 1 root root 1134 Nov 26  2012 Module.php
+
+./flowplayer6snapshot604/server/php5/module/Application/view:
+total 12
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 layout
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 error
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 application
+
+./flowplayer6snapshot604/server/php5/module/Application/view/layout:
+total 4
+-rwxrwxrwx 1 root root 2469 Nov 26  2012 layout.phtml
+
+./flowplayer6snapshot604/server/php5/module/Application/view/error:
+total 8
+-rwxrwxrwx 1 root root 3403 Nov 26  2012 404.phtml
+-rwxrwxrwx 1 root root 2011 Nov 26  2012 index.phtml
+
+./flowplayer6snapshot604/server/php5/module/Application/view/application:
+total 4
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 index
+
+./flowplayer6snapshot604/server/php5/module/Application/view/application/index:
+total 0
+-rwxrwxrwx 1 root root 0 Nov 27  2012 index.phtml
+
+./flowplayer6snapshot604/server/php5/module/Application/src:
+total 4
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 Application
+
+./flowplayer6snapshot604/server/php5/module/Application/src/Application:
+total 4
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 Controller
+
+./flowplayer6snapshot604/server/php5/module/Application/src/Application/Controller:
+total 8
+-rwxrwxrwx 1 root root 5359 Nov 14  2015 IndexController.php
+
+./flowplayer6snapshot604/server/php5/module/Application/language:
+total 0
+
+./flowplayer6snapshot604/server/php5/module/Application/config:
+total 8
+-rwxrwxrwx 1 root root 4593 Nov 14  2015 module.config.php
+
+./flowplayer6snapshot604/server/php5/data:
+total 4
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 cache
+
+./flowplayer6snapshot604/server/php5/data/cache:
+total 0
+
+./flowplayer6snapshot604/server/php5/config:
+total 8
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 autoload
+-rwxrwxrwx 1 root root  323 Nov 26  2012 application.config.php
+
+./flowplayer6snapshot604/server/php5/config/autoload:
+total 12
+-rwxrwxrwx 1 root root 430 Nov 26  2012 global.php
+-rwxrwxrwx 1 root root 529 Nov 26  2012 local.php.dist
+-rwxrwxrwx 1 root root 376 Nov 26  2012 README.md
+
+./flowplayer6snapshot604/server/asp.net:
+total 4
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 SnapshotServer
+
+./flowplayer6snapshot604/server/asp.net/SnapshotServer:
+total 12
+drwxrwxrwx 8 root root 4096 Jun  1 16:16 SnapshotServer
+-rwxrwxrwx 1 root root  534 May  2  2013 SnapshotServer.userprefs
+-rwxrwxrwx 1 root root  961 May  2  2013 SnapshotServer.sln
+
+./flowplayer6snapshot604/server/asp.net/SnapshotServer/SnapshotServer:
+total 48
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 bin
+drwxrwxrwx 3 root root 4096 Jun  1 16:16 Views
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 Scripts
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 Models
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 Controllers
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 Content
+-rwxrwxrwx 1 root root 4447 May  2  2013 SnapshotServer.csproj
+-rwxrwxrwx 1 root root 6532 May  2  2013 Web.config
+-rwxrwxrwx 1 root root   60 May  2  2013 Global.asax
+-rwxrwxrwx 1 root root  655 May  2  2013 Global.asax.cs
+
+./flowplayer6snapshot604/server/asp.net/SnapshotServer/SnapshotServer/bin:
+total 1596
+-rwxrwxrwx 1 root root   9216 May  2  2013 SnapshotServer.dll
+-rwxrwxrwx 1 root root   1154 May  2  2013 SnapshotServer.dll.mdb
+-rwxrwxrwx 1 root root 359424 Apr 14  2013 System.Web.Http.dll
+-rwxrwxrwx 1 root root 180050 Apr 14  2013 System.Web.Http.dll.mdb
+-rwxrwxrwx 1 root root 440320 Apr 14  2013 System.Web.Mvc.dll
+-rwxrwxrwx 1 root root 225109 Apr 14  2013 System.Web.Mvc.dll.mdb
+-rwxrwxrwx 1 root root  37888 Apr 14  2013 System.Web.WebPages.Razor.dll
+-rwxrwxrwx 1 root root  10898 Apr 14  2013 System.Web.WebPages.Razor.dll.mdb
+-rwxrwxrwx 1 root root 203776 Apr 14  2013 System.Web.WebPages.dll
+-rwxrwxrwx 1 root root  95225 Apr 14  2013 System.Web.WebPages.dll.mdb
+-rwxrwxrwx 1 root root  39424 Apr 14  2013 System.Web.WebPages.Deployment.dll
+-rwxrwxrwx 1 root root   9469 Apr 14  2013 System.Web.WebPages.Deployment.dll.mdb
+
+./flowplayer6snapshot604/server/asp.net/SnapshotServer/SnapshotServer/Views:
+total 8
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 Home
+-rwxrwxrwx 1 root root 1428 May  2  2013 Web.config
+
+./flowplayer6snapshot604/server/asp.net/SnapshotServer/SnapshotServer/Views/Home:
+total 4
+-rwxrwxrwx 1 root root 335 May  2  2013 Index.aspx
+
+./flowplayer6snapshot604/server/asp.net/SnapshotServer/SnapshotServer/Scripts:
+total 0
+
+./flowplayer6snapshot604/server/asp.net/SnapshotServer/SnapshotServer/Models:
+total 0
+
+./flowplayer6snapshot604/server/asp.net/SnapshotServer/SnapshotServer/Controllers:
+total 4
+-rwxrwxrwx 1 root root 2704 May 28  2013 HomeController.cs
+
+./flowplayer6snapshot604/server/asp.net/SnapshotServer/SnapshotServer/Content:
+total 0
+
+./flowplayer6snapshot604/dist:
+total 8
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 js
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 css
+
+./flowplayer6snapshot604/dist/js:
+total 48
+-rwxrwxrwx 1 root root  4155 May 12 11:24 httpstreaminghds-6.0.0.min.js
+-rwxrwxrwx 1 root root 13308 May 12 11:24 snapshot-6.0.4.js.gz
+-rwxrwxrwx 1 root root 13308 May 12 11:24 snapshot-6.0.4.min.js
+-rwxrwxrwx 1 root root  4155 May 12 11:24 httpstreaminghds-6.0.0.js.gz
+
+./flowplayer6snapshot604/dist/css:
+total 16
+-rwxrwxrwx 1 root root 408 May 12 11:24 playlist.css.gz
+-rwxrwxrwx 1 root root 408 May 12 11:24 playlist.tiny.css
+-rwxrwxrwx 1 root root 532 May 12 11:24 snapshot.css.gz
+-rwxrwxrwx 1 root root 532 May 12 11:24 snapshot.tiny.css
+
+./flowplayer6snapshot604/demo:
+total 8
+drwxrwxrwx 2 root root 4096 Jun  1 16:16 javascript
+drwxrwxrwx 5 root root 4096 Jun  1 16:16 html
+
+./flowplayer6snapshot604/demo/javascript:
+total 164
+-rwxrwxrwx 1 root root  61343 May 12 11:24 snapshot-6.0.4.js
+-rwxrwxrwx 1 root root 103109 Jan 15  2016 flowplayer.min.js
+
+./flowplayer6snapshot604/demo/html:
+total 180
+drwxrwxrwx 3 root root  4096 Jun  1 16:16 s3
+drwxrwxrwx 2 root root  4096 Jun  1 16:16 images
+drwxrwxrwx 2 root root  4096 Jun  1 16:16 css
+-rwxrwxrwx 1 root root 61017 May 12 11:24 index.html
+-rwxrwxrwx 1 root root 55917 May 12 11:24 DebugVideoSnapshotPlayer-6.0.4.swf
+-rwxrwxrwx 1 root root 49502 May 12 11:24 VideoSnapshotPlayer-6.0.4.swf
+
+./flowplayer6snapshot604/demo/html/s3:
+total 16
+-rwxrwxrwx 1 root root 11434 Jun  5 23:45 index.php
+drwxrwxrwx 2 root root  4096 Jun  1 16:16 js
+
+./flowplayer6snapshot604/demo/html/s3/js:
+total 108
+-rwxrwxrwx 1 root root 108764 Mar  9  2016 plupload.full.min.js
+
+./flowplayer6snapshot604/demo/html/images:
+total 40
+-rwxrwxrwx 1 root root 31827 Mar  9  2016 bbbfp5.jpg
+-rwxrwxrwx 1 root root  1712 May 26  2015 snapshoticon.png
+-rwxrwxrwx 1 root root  2194 Apr  3  2013 cameraicon.png
+
+./flowplayer6snapshot604/demo/html/css:
+total 16
+-rwxrwxrwx 1 root root  651 Mar 23  2016 playlist.min.css
+-rwxrwxrwx 1 root root 1047 Mar 23  2016 snapshot.min.css
+-rwxrwxrwx 1 root root 1350 Mar  9  2016 snapshot.css
+-rwxrwxrwx 1 root root  936 May 15  2015 playlist.css
+
+./videojs_snapshot_580:
+total 36
+-rwxrwxrwx 1 root root 3349 May 23 02:30 index.php
+drwxrwxrwx 4 root root 4096 May 22 23:47 server
+drwxrwxrwx 4 root root 4096 May 22 23:46 dist
+drwxrwxrwx 4 root root 4096 May 22 23:46 demo
+-rwxrwxrwx 1 root root   25 May 20 10:46 1stud.io.txt
+-rwxrwxrwx 1 root root 3536 Mar  3  2016 README.txt
+-rwxrwxrwx 1 root root 9201 Oct 28  2015 LICENSE.txt
+
+./videojs_snapshot_580/server:
+total 8
+drwxrwxrwx 7 root root 4096 May 22 23:47 php5
+drwxrwxrwx 3 root root 4096 May 22 23:46 asp.net
+
+./videojs_snapshot_580/server/php5:
+total 24
+drwxrwxrwx 4 root root 4096 May 22 23:47 vendor
+drwxrwxrwx 3 root root 4096 May 22 23:47 public
+drwxrwxrwx 3 root root 4096 May 22 23:47 module
+drwxrwxrwx 3 root root 4096 May 22 23:47 data
+drwxrwxrwx 3 root root 4096 May 22 23:47 config
+-rwxrwxrwx 1 root root 1854 Nov 26  2012 init_autoloader.php
+
+./videojs_snapshot_580/server/php5/vendor:
+total 16
+drwxrwxrwx 2 root root 4096 May 22 23:47 composer
+drwxrwxrwx 2 root root 4096 May 22 23:47 bin
+-rwxrwxrwx 1 root root  182 Nov 26  2012 autoload.php
+-rwxrwxrwx 1 root root   73 Nov 26  2012 README.md
+
+./videojs_snapshot_580/server/php5/vendor/composer:
+total 28
+-rwxrwxrwx 1 root root  136 Nov 26  2012 autoload_classmap.php
+-rwxrwxrwx 1 root root  280 Nov 26  2012 autoload_namespaces.php
+-rwxrwxrwx 1 root root 1216 Nov 26  2012 autoload_real.php
+-rwxrwxrwx 1 root root 5581 Nov 26  2012 ClassLoader.php
+-rwxrwxrwx 1 root root 4587 Nov 26  2012 installed.json
+
+./videojs_snapshot_580/server/php5/vendor/bin:
+total 0
+
+./videojs_snapshot_580/server/php5/public:
+total 12
+drwxrwxrwx 2 root root 4096 May 22 23:47 snapshots
+-rwxrwxrwx 1 root root  214 Nov 28  2012 crossdomain.xml
+-rwxrwxrwx 1 root root  304 Nov 26  2012 index.php
+
+./videojs_snapshot_580/server/php5/public/snapshots:
+total 0
+
+./videojs_snapshot_580/server/php5/module:
+total 4
+drwxrwxrwx 6 root root 4096 May 22 23:47 Application
+
+./videojs_snapshot_580/server/php5/module/Application:
+total 20
+drwxrwxrwx 5 root root 4096 May 22 23:47 view
+drwxrwxrwx 3 root root 4096 May 22 23:47 src
+drwxrwxrwx 2 root root 4096 May 22 23:47 language
+drwxrwxrwx 2 root root 4096 May 22 23:47 config
+-rwxrwxrwx 1 root root 1134 Nov 26  2012 Module.php
+
+./videojs_snapshot_580/server/php5/module/Application/view:
+total 12
+drwxrwxrwx 2 root root 4096 May 22 23:47 layout
+drwxrwxrwx 2 root root 4096 May 22 23:47 error
+drwxrwxrwx 3 root root 4096 May 22 23:47 application
+
+./videojs_snapshot_580/server/php5/module/Application/view/layout:
+total 4
+-rwxrwxrwx 1 root root 2469 Nov 26  2012 layout.phtml
+
+./videojs_snapshot_580/server/php5/module/Application/view/error:
+total 8
+-rwxrwxrwx 1 root root 3403 Nov 26  2012 404.phtml
+-rwxrwxrwx 1 root root 2011 Nov 26  2012 index.phtml
+
+./videojs_snapshot_580/server/php5/module/Application/view/application:
+total 4
+drwxrwxrwx 2 root root 4096 May 22 23:47 index
+
+./videojs_snapshot_580/server/php5/module/Application/view/application/index:
+total 0
+-rwxrwxrwx 1 root root 0 Nov 27  2012 index.phtml
+
+./videojs_snapshot_580/server/php5/module/Application/src:
+total 4
+drwxrwxrwx 3 root root 4096 May 22 23:47 Application
+
+./videojs_snapshot_580/server/php5/module/Application/src/Application:
+total 4
+drwxrwxrwx 2 root root 4096 May 22 23:47 Controller
+
+./videojs_snapshot_580/server/php5/module/Application/src/Application/Controller:
+total 8
+-rwxrwxrwx 1 root root 5359 Nov 14  2015 IndexController.php
+
+./videojs_snapshot_580/server/php5/module/Application/language:
+total 0
+
+./videojs_snapshot_580/server/php5/module/Application/config:
+total 8
+-rwxrwxrwx 1 root root 4593 Nov 14  2015 module.config.php
+
+./videojs_snapshot_580/server/php5/data:
+total 4
+drwxrwxrwx 2 root root 4096 May 22 23:47 cache
+
+./videojs_snapshot_580/server/php5/data/cache:
+total 0
+
+./videojs_snapshot_580/server/php5/config:
+total 8
+drwxrwxrwx 2 root root 4096 May 22 23:47 autoload
+-rwxrwxrwx 1 root root  323 Nov 26  2012 application.config.php
+
+./videojs_snapshot_580/server/php5/config/autoload:
+total 12
+-rwxrwxrwx 1 root root 430 Nov 26  2012 global.php
+-rwxrwxrwx 1 root root 529 Nov 26  2012 local.php.dist
+-rwxrwxrwx 1 root root 376 Nov 26  2012 README.md
+
+./videojs_snapshot_580/server/asp.net:
+total 4
+drwxrwxrwx 3 root root 4096 May 22 23:47 SnapshotServer
+
+./videojs_snapshot_580/server/asp.net/SnapshotServer:
+total 12
+drwxrwxrwx 8 root root 4096 May 22 23:46 SnapshotServer
+-rwxrwxrwx 1 root root  534 May  2  2013 SnapshotServer.userprefs
+-rwxrwxrwx 1 root root  961 May  2  2013 SnapshotServer.sln
+
+./videojs_snapshot_580/server/asp.net/SnapshotServer/SnapshotServer:
+total 48
+drwxrwxrwx 2 root root 4096 May 22 23:47 bin
+drwxrwxrwx 3 root root 4096 May 22 23:46 Views
+drwxrwxrwx 2 root root 4096 May 22 23:46 Scripts
+drwxrwxrwx 2 root root 4096 May 22 23:46 Models
+drwxrwxrwx 2 root root 4096 May 22 23:46 Controllers
+drwxrwxrwx 2 root root 4096 May 22 23:46 Content
+-rwxrwxrwx 1 root root 4447 May  2  2013 SnapshotServer.csproj
+-rwxrwxrwx 1 root root 6532 May  2  2013 Web.config
+-rwxrwxrwx 1 root root   60 May  2  2013 Global.asax
+-rwxrwxrwx 1 root root  655 May  2  2013 Global.asax.cs
+
+./videojs_snapshot_580/server/asp.net/SnapshotServer/SnapshotServer/bin:
+total 1596
+-rwxrwxrwx 1 root root   9216 May  2  2013 SnapshotServer.dll
+-rwxrwxrwx 1 root root   1154 May  2  2013 SnapshotServer.dll.mdb
+-rwxrwxrwx 1 root root 359424 Apr 14  2013 System.Web.Http.dll
+-rwxrwxrwx 1 root root 180050 Apr 14  2013 System.Web.Http.dll.mdb
+-rwxrwxrwx 1 root root 440320 Apr 14  2013 System.Web.Mvc.dll
+-rwxrwxrwx 1 root root 225109 Apr 14  2013 System.Web.Mvc.dll.mdb
+-rwxrwxrwx 1 root root  37888 Apr 14  2013 System.Web.WebPages.Razor.dll
+-rwxrwxrwx 1 root root  10898 Apr 14  2013 System.Web.WebPages.Razor.dll.mdb
+-rwxrwxrwx 1 root root 203776 Apr 14  2013 System.Web.WebPages.dll
+-rwxrwxrwx 1 root root  95225 Apr 14  2013 System.Web.WebPages.dll.mdb
+-rwxrwxrwx 1 root root  39424 Apr 14  2013 System.Web.WebPages.Deployment.dll
+-rwxrwxrwx 1 root root   9469 Apr 14  2013 System.Web.WebPages.Deployment.dll.mdb
+
+./videojs_snapshot_580/server/asp.net/SnapshotServer/SnapshotServer/Views:
+total 8
+drwxrwxrwx 2 root root 4096 May 22 23:46 Home
+-rwxrwxrwx 1 root root 1428 May  2  2013 Web.config
+
+./videojs_snapshot_580/server/asp.net/SnapshotServer/SnapshotServer/Views/Home:
+total 4
+-rwxrwxrwx 1 root root 335 May  2  2013 Index.aspx
+
+./videojs_snapshot_580/server/asp.net/SnapshotServer/SnapshotServer/Scripts:
+total 0
+
+./videojs_snapshot_580/server/asp.net/SnapshotServer/SnapshotServer/Models:
+total 0
+
+./videojs_snapshot_580/server/asp.net/SnapshotServer/SnapshotServer/Controllers:
+total 4
+-rwxrwxrwx 1 root root 2704 May 28  2013 HomeController.cs
+
+./videojs_snapshot_580/server/asp.net/SnapshotServer/SnapshotServer/Content:
+total 0
+
+./videojs_snapshot_580/dist:
+total 8
+drwxrwxrwx 2 root root 4096 Jul 26 18:11 js
+drwxrwxrwx 2 root root 4096 Jul 26 18:06 css
+
+./videojs_snapshot_580/dist/js:
+total 56
+-rwxrwxrwx 1 root root 22810 Jul 27 10:59 snapshot-5.8.0.min.js
+-rwxrwxrwx 1 root root 18902 Jul 25 23:06 snapshot-5.8.0.min_new.js
+-rwxrwxrwx 1 root root  9628 May 20 10:46 snapshot-5.8.0.js.gz
+
+./videojs_snapshot_580/dist/css:
+total 12
+-rwxrwxrwx 1 root root 737 Jul 25 23:06 snapshot_new.tiny.css
+-rwxrwxrwx 1 root root 737 May 20 10:46 snapshot.css.gz
+-rwxrwxrwx 1 root root 737 May 20 10:46 snapshot.tiny.css
+
+./videojs_snapshot_580/demo:
+total 8
+drwxrwxrwx 2 root root 4096 Jul 26 18:11 javascript
+drwxrwxrwx 4 root root 4096 May 28 13:13 html
+
+./videojs_snapshot_580/demo/javascript:
+total 248
+-rwxrwxrwx 1 root root 101297 Jul 27 10:59 snapshot-5.8.0.js
+-rwxrwxrwx 1 root root  38356 May 20 10:46 snapshot-5.8.0_demo.js
+-rwxrwxrwx 1 root root 108764 Mar  9  2016 plupload.full.min.js
+
+./videojs_snapshot_580/demo/html:
+total 28
+drwxrwxrwx 2 root root  4096 Jul 30 01:43 css
+-rwxrwxrwx 1 root root 11285 May 28 15:17 index.php
+drwxrwxrwx 2 root root  4096 May 28 13:19 js
+-rwxrwxrwx 1 root root  3293 May 26 00:57 index2.php
+-rwxrwxrwx 1 root root  2230 May 23 03:37 index.html
+
+./videojs_snapshot_580/demo/html/css:
+total 16
+-rwxrwxrwx 1 root root 1316 May 22 10:52 snapshot.min_new.css
+-rwxrwxrwx 1 root root 1316 May 19 10:53 snapshot.min.css
+-rw-r--r-- 1 root root 2080 May 19 10:48 snapshot.css
+-rwxrwxrwx 1 root root 2080 May 19 10:48 snapshot_demo.css
+
+./videojs_snapshot_580/demo/html/js:
+total 236
+-rwxrwxrwx 1 root root  95410 Mar  9  2016 flowplayer.min.js
+-rwxrwxrwx 1 root root  29349 Mar  9  2016 Moxie.swf
+-rwxrwxrwx 1 root root 108764 Mar  9  2016 plupload.full.min.js
+
+./playlist:
+total 12
+-rwxrwxrwx 1 root root 1646 May 20 01:41 script.js
+-rwxrwxrwx 1 root root 5008 May  7 01:19 add_playlist.js
+
+./stream:
+total 1140
+-rwxrwxrwx 1 root root    645 May  7 01:19 testforfiles.js
+-rwxrwxrwx 1 root root   4245 May  7 01:19 skipback.png
+-rwxrwxrwx 1 root root  12381 May  7 01:19 silverlightmediaelement.xap
+-rwxrwxrwx 1 root root   6201 May  7 01:19 mejs-skins.css
+-rwxrwxrwx 1 root root  50615 May  7 01:19 mediaelementplayer.min.js
+-rwxrwxrwx 1 root root  19865 May  7 01:19 mediaelementplayer.min.css
+-rwxrwxrwx 1 root root  98438 May  7 01:19 mediaelementplayer.js
+-rwxrwxrwx 1 root root  24070 May  7 01:19 mediaelementplayer.css
+-rwxrwxrwx 1 root root  27046 May  7 01:19 mediaelement.min.js
+-rwxrwxrwx 1 root root  57273 May  7 01:19 mediaelement.js
+-rwxrwxrwx 1 root root  77661 May  7 01:19 mediaelement-and-player.min.js
+-rwxrwxrwx 1 root root 155712 May  7 01:19 mediaelement-and-player.js
+-rwxrwxrwx 1 root root   6224 May  7 01:19 loading.gif
+-rwxrwxrwx 1 root root 268380 May  7 01:19 jquery.js
+-rwxrwxrwx 1 root root  58374 May  7 01:19 flashmediaelement.swf
+-rwxrwxrwx 1 root root  57129 May  7 01:19 flashmediaelement-cdn.swf
+-rwxrwxrwx 1 root root      0 May  7 01:19 DO NOT CHANGE THESE FILES. USE -src- FOLDER.txt
+-rwxrwxrwx 1 root root  10344 May  7 01:19 controls.svg
+-rwxrwxrwx 1 root root   1892 May  7 01:19 controls.png
+-rwxrwxrwx 1 root root  80753 May  7 01:19 controls.fw.png
+-rwxrwxrwx 1 root root   5511 May  7 01:19 controls-wmp.png
+-rwxrwxrwx 1 root root   1960 May  7 01:19 controls-wmp-bg.png
+-rwxrwxrwx 1 root root   1559 May  7 01:19 controls-ted.png
+-rwxrwxrwx 1 root root   1029 May  7 01:19 bigplay.svg
+-rwxrwxrwx 1 root root   3001 May  7 01:19 bigplay.png
+-rwxrwxrwx 1 root root  79426 May  7 01:19 bigplay.fw.png
+-rwxrwxrwx 1 root root    166 May  7 01:19 background.png
+
+./settings:
+total 8
+-rwxrwxrwx 1 root root 6284 May 24 03:29 script.js
+
+./schedule:
+total 376
+-rwxrwxrwx 1 root root  38244 May  7 01:19 time_picker.js
+-rwxrwxrwx 1 root root  10711 May  7 01:19 dhtmlxtree_deprecated.js
+-rwxrwxrwx 1 root root 204293 May  7 01:19 dhtmlxtree.js
+-rwxrwxrwx 1 root root   2113 May  7 01:19 dhtmlxscheduler_outerdrag.js
+-rwxrwxrwx 1 root root 119511 May  7 01:19 dhtmlxscheduler.js
+
+./playout:
+total 8
+-rwxrwxrwx 1 root root 8069 May  7 01:19 script.js
+
+./jQuery_UI:
+total 456
+-rwxrwxrwx 1 root root 464435 May  7 01:19 jquery-ui.js
+
+./jquery_file_upload:
+total 76
+-rwxrwxrwx 1 root root 10612 May  7 01:19 jquery.iframe-transport.js
+-rwxrwxrwx 1 root root 62980 May  7 01:19 jquery.fileupload.js
+
+./d3-timeline:
+total 68
+-rwxrwxrwx 1 root root  1696 May  7 01:19 utils.js
+-rwxrwxrwx 1 root root 63625 May  7 01:19 d3-timeline.js
+
+./collections:
+total 16
+-rwxrwxrwx 1 root root 3939 May  7 01:18 script.js
+-rwxrwxrwx 1 root root    0 May  7 01:18 edit_delete_collection.js
+-rwxrwxrwx 1 root root  692 May  7 01:18 drag_and_drop.js
+-rwxrwxrwx 1 root root 3082 May  7 01:18 collections_index.js
+-rwxrwxrwx 1 root root 1120 May  7 01:18 add_collection.js
+
+./channels:
+total 4
+-rwxrwxrwx 1 root root 2775 May  7 01:18 channels.js
+
+./admin:
+total 32
+-rwxrwxrwx 1 root root 31625 May  7 01:18 script.js

@@ -1,0 +1,18 @@
+version: '2'
+services:
+  1studio_db:
+    ports:
+      - "35000:3306"
+
+  1studio_redis:
+    ports:
+      - "6379:6379"
+
+  1studio_laravel:
+    volumes:
+      - ../:/var/www
+    environment:
+      - NODE_ENV=development
+    ports:
+      - '80:80'
+    command: [bash, '/scripts/webpack.sh']

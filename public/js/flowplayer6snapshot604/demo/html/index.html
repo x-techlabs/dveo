@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title></title>
+    <link rel="stylesheet" href="//releases.flowplayer.org/6.0.4/skin/minimalist.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="../javascript/flowplayer.min.js"></script>
+
+
+    <style>
+        body { font: 12px "Lucida Grande",sans-serif; }
+        .flowplayer { width: 620px; height: 350px; background-color: #444; margin: 50px auto;  }
+        .flowplayer.is-loading { border: 1px solid #000; }
+    </style>
+
+
+</head>
+
+<body id="plugins_snapshot">
+
+
+<div id="wrap">
+
+<style>
+
+    .snapshot.preview {
+        float: right;
+        width: 600px;
+
+    }
+
+    #player {
+        float: left;
+        background: #000 url(images/bbbfp5.jpg) 0 0 no-repeat;
+        background-position: center;
+        background-size:620px 350px;
+        width: 620px; height: 350px; background-color: #444;
+    }
+
+    #local {
+        float: left;
+        background: #000 url(images/bbbfp5.jpg) 0 0 no-repeat;
+        background-position: center;
+        background-size:620px 350px;
+        width: 620px; height: 350px; background-color: #444;
+    }
+
+    #jsapi {
+        background: #000 url(images/bbbfp5.jpg) 0 0 no-repeat;
+        background-position: center;
+        background-size:620px 350px;
+        width: 620px; height: 350px; background-color: #444;
+    }
+
+
+
+</style>
+
+    <link rel="stylesheet" href="css/snapshot.min.css">
+    <link rel="stylesheet" href="css/playlist.min.css"/>
+
+    
+<script src="../javascript/snapshot-6.0.4.js"></script>
+
+
+<div id="content">
+
+
+<h1>
+    <strong>Video Screen Snapshot</strong>
+    <em>Make video screen snapshots directly within Flowplayer 6</em>
+</h1>
+
+
+<script>
+        flowplayer.conf.notification = {
+            showDelay: 1000,
+            hideDelay: 2000
+        };
+
+        flowplayer.conf = {
+           // splash: false
+        };
+
+        flowplayer.conf.defaults = {
+            snapshot : {
+                serverurl: "https://flowplayer.electroteque.org/snapshot/index/save",
+                tokenurl: "https://flowplayer.electroteque.org/snapshot/index/token",
+                //serverurl: "http://192.168.4.100/snapshot/save",
+                //tokenurl: "http://192.168.4.100/snapshot/token",
+                success: "Capture Complete",
+                error: "Capture Failed Try Again",
+                type: "png",
+                quality: 1,
+                //originbaseurl: "http://192.168.4.100/video/",
+               // originbaseurl: "https://flowplayer.electroteque.org/video/",
+                captureswf: "VideoSnapshotPlayer-6.0.4.swf"
+            }
+        }
+
+
+</script>
+
+
+
+
+    <div width="600px" id="playercontainer">
+        <div id="player" class="is-snapshot play-button is-splash"  data-embed="false"></div>
+        <div class="snapshot preview"></div>
+    </div>
+
+    <br clear="all" />
+
+    <script>
+
+        $(function () {
+
+            var player = flowplayer("#player", {
+                snapshot: {
+                    //setups like this overwrite the global config. They are required here.
+                    type: "png",
+                    //maxwidth: 600,
+                    originbaseurl: "https://flowplayer.electroteque.org/video/"
+                },
+                clip: {
+                    snapshotname: "test2-[time]",
+                    sources: [
+                        {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+                        {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+                        {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+                    ]
+                }
+            });
+
+            player.bind("capturecomplete", function(api, data) {
+                console.log("Capture Complete: ", data);
+            });
+
+
+        });
+    </script>
+
+  
+
+<br clear="all" />
+
+
+    <p>
+        This demonstrates manually capturing a video frame to a jpeg or png image and saving to a backend service.
+    </p>
+
+    <p>
+        Global configurations can be made in the `flowplayer.conf.defaults` config. This is required as json setups will overwrite this.
+    </p>
+
+    <p>
+        Enabling capturing features requires the `is-snapshot` style added to the player containers.
+    </p>
+
+    <p>
+        For very large video frames the `maxwidth` config can constrain the width to scale the capture to or the player container dimensions will be used when `origdimensions` is disabled.
+    </p>
+
+    <p>
+        For browsers that don't support Html Blob and Canvas include the Html5 polyfills to allow for capture support.
+    </p>
+
+    <p>
+        A Flash work around solution is provided for RTMP and HLS streams. The Flash solution now uses new fast graphics functions in Flash that also works around security contraints with both RTMP and HLS capturing.
+    </p>
+
+    <p>
+        Work around solution for non-inline player support like on Iphone.
+    </p>
+
+
+    <h2>Features</h2>
+
+    <br><br>
+
+    <ul>
+        <li>Capture of video frame from any http streaming source with <a href="http://enable-cors.org/">Cross Origin Resource Sharing  enabled</a> and a browser that supports the canvas element, a fallback for IE is supplied.</li>
+        <li>Jpeg and PNG encoding on the fly with a quality setting for jpeg encoding.</li>
+        <li>Javascript api service to automate the capture.</li>
+        <li>Returning the canvas to display in a preview window.</li>
+        <li>Example backend included to demonstrate saving the image sent.</li>
+        <li>Csrf token security support.</li>
+        <li>Includes a Notification plugin to display user feedback. </li>
+        <li>Now works with Cloudfront video. Cloudfront now supports the OPTIONS request method which is sent via the browser to validate the cross origin request. see <a href="http://docs.amazonwebservices.com/AmazonS3/latest/dev/cors.html">http://docs.amazonwebservices.com/AmazonS3/latest/dev/cors.html</a>.</li>
+        <li>Cors support for browsers lacking crossOrigin video tag specs like Safari and IE using a proxy solution.</li>
+        <li>Local downloads support for Chrome and Firefox. Safari lacks special file download features and therefore requires to be opened in a new tab. </li>
+        <li>Support and tested in Chrome,Firefox,Safari, IE 11 for now. (Safari and IE11 both need the CORS proxy). Possibly support for IE9-IE10 with canvas and blob support fallbacks included.</li>
+        <li>Thumbnail creation support.</li>
+        <li>Image width automatic scaling support.</li>
+        <li>S3 client side upload example provided with thumbnail creation support.</li>
+        <li>Playlist configuration support.</li>
+        <li>Flash proxy player for capture work around for RTMP and HLS streams using fast native graphics capture functions in Flash Player 11.6.</li>
+        <li>Work around solution for non-inline player support like on Iphone. A notification will be provided when exiting fullscreen to start the capture at that current time.</li>
+    </ul>
+
+    <h2>New Flash Version Features Available For 11.6</h2>
+
+    <ul>
+        <li>Fast image capture using native player features to obtain the video display data directly.</li>
+        <li>Fast image encoding from the data using native player features.</li>
+        <li>Works with any available streaming format without any modifications required.</li>
+        <li>Works with RTMP, HLS, HDS and Smooth Streaming features.</li>
+        <li>Support for a custom capture player for HDS with Stage Video enabled.</li>
+        <li>Is not contrained to Flash security sandbox contraints so will work with Cloudfront RTMP.</li>
+    </ul>
+
+
+    <h2>Known Issues</h2>
+    <ul>
+        <li>Only works for now in Chrome and Firefox browsers. Safari / Webkit / IE 11 will work with same origin videos, it does not have support for cross origin with the video tag therefore the canvas cannot obtain the image. A proxy work around is required to make it function.  see
+        <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#attr-media-crossorigin">http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#attr-media-crossorigin</a>.</li>
+        <li>The video server backend requires to have Cors support enabled with the Access-Control-Allow-Origin header.</li>
+        <li>Considered a very experimental feature until Cors / Canvas / Html5 video is standardised.</li>
+        <li>Local file downloads support is considered experimental until all browsers support file download attributes.</li>
+        <li>Safari has problems with redirecting blobs within a new window. For now it's redirecting to the same tab due to inability with download support. Chrome,Firefox,IE 11 all bring up file dialogs or download automatically.</li>
+        <li>Severe design limitations with Flowplayer 6 making it impossible to configure the video for Cors before playback in splash or playlist mode because it's dynamic video tag creation is inaccessible like most of it's core features. For both splash and playlist modes a video tag has to be added in it's place to be used instead.</li>
+        <li>Severe design limitation crept into Flowplayer 6.0.3 that disables CORS support intentionally if native subtitles support is not enabled and therefore breaks the capture feature. A work around has been provided to trick the html5 engine into not resetting the CORS support however native subtitles support needs to be disabled in the process. </li>
+        <li>Severe design limitation with Flowplayer 6 Flash player for RTMP and HLS streams. Unlike Flowplayer 3 and JWPlayer which provides plugin support for features, there is no Flash plugin support, the players are extremely limited re-engineered to serve one function therefore there is no way to get access to the stream and video.
+        A Flash proxy player is provided to do the capture requiring to play the stream first. This will incur some latency with live streams including RTMP which requires an extra second delay after buffering so will not be frame accurate.</li>
+        <li>Cross origin support is lacking in Android default browser. The proxy cross origin work around does not work at all either. This is an identifiable bug that has been reported.</li>
+        <li>Chrome on Android has a known bug with capturing video. The captured image becomes distorted, and full of artifacts. This has something to do with GPU accelerated Html5 rendering. This is a known bug and has been reported. </li>
+    </ul>
+
+
+    <h3>(Current Version 6.0.4)</h3>
+
+<h2>Compatibility</h2>
+
+<ul>
+    <li>Flowplayer 6.0.4 and above</li>
+</ul>
+
+
+<div>
+    <h2>Plugin Available For Purchase via Paypal</h2> <br>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="9EXLRYY47H7DJ">
+        <table>
+            <tr><td><input type="hidden" name="on0" value="License Options">License Options</td></tr><tr><td><select name="os0">
+            <option value="Single Domain - Suits Small Sites">Single Domain - Suits Small Sites $280.00 AUD</option>
+            <option value="Multi Domain - Suits Larger Sites">Multi Domain - Suits Larger Sites $480.00 AUD</option>
+            <option value="Single Domain Not For Profit">Single Domain Not For Profit $150.00 AUD</option>
+        </select> </td></tr>
+            <tr><td><input type="hidden" name="on1" value="Domain(s)">Domain(s)</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+        </table>
+        <input type="hidden" name="currency_code" value="AUD">
+        <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+
+
+
+
+
+
+
+</div>
+
+
+<h2>License Information</h2>
+
+<p>The Snapshot plugin is a once off commercial license with updates and support to the Snapshot plugin only.
+    Flowplayer related questions and support may be provided on their forums at <a href="http://flowplayer.org/forum">http://flowplayer.org/forum</a></p>
+
+<ul>
+    <li>Single Domain License - Suitable for small sites with updates and unlimited support included.</li>
+    <li>Multi Domain License - Suitable for larger sites and video platform sites with updates, feature requests and unlimited priority support included.</li>
+    <li>Bundle License  - Provide both Flowplayer 3 Flash features with Flowplayer 6 Html5 alternative. </li>
+</ul>
+
+<h3>Note:</h3>
+
+<p>With your purchase please provide your domains to be provided with your licensed plugin. New domains need to be requested manually for the moment. </p>
+
+<h2>Demo</h2>
+<p>Contact for a site demo download.</p>
+
+<h2>Refund Policy:</h2>
+<p>Please request for a 60 day site demo before purchase. Refunds will not be issued unless under some circumstances sorry for the inconvenience.</p>
+
+
+
+
+<h2>Examples</h2>
+
+<a name="basic"></a>
+<h2>Basic Example</h2>
+
+<h3>Flowplayer configuration</h3>
+
+<p>Minimal config with a global json config.</p>
+
+
+
+<div class="box code">
+<pre><code class="javascript">
+    flowplayer.conf.notification = {
+    showDelay: 1000,
+    hideDelay: 2000
+    };
+
+    flowplayer.conf.defaults = {
+    snapshot : {
+    debuglog: true,
+    serverurl: "https://flowplayer.electroteque.org/snapshot/index/save",
+    tokenurl: "https://flowplayer.electroteque.org/snapshot/index/token",
+    success: "Capture Complete",
+    error: "Capture Failed Try Again",
+    type: "png",
+    quality: 1,
+    originbaseurl: "https://flowplayer.electroteque.org/video/"
+    }
+    }
+</code></pre>
+<pre><code class="html">
+    &lt;div width=&quot;600px&quot;&gt;
+    &lt;div id=&quot;player&quot; class=&quot;flowplayer is-snapshot&quot; data-embed=&quot;false&quot; data-snapshotname=&quot;test&quot; data-debuglog=&quot;true&quot;&gt;
+    &lt;video preload='none'&gt;
+    &lt;source type=&quot;video/webm&quot; src=&quot;//videos.electroteque.org/big_buck_bunny_480p_h264.webm&quot;/&gt;
+    &lt;source type=&quot;video/mp4&quot; src=&quot;//videos.electroteque.org/big_buck_bunny_480p_h264.mp4&quot;/&gt;
+    &lt;source type=&quot;video/ogg&quot;   src=&quot;//videos.electroteque.org/big_buck_bunny_480p_h264.ogv&quot;/&gt;
+    &lt;/video&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;snapshot preview&quot;/&gt;
+    &lt;/div&gt;
+</code></pre>
+</div>
+
+<p>A preview display can be enabled to display the captured video frame using a css class name `snapshot preview` </p>
+
+<div class="box code">
+<pre><code class="html">
+    &lt;div class=&quot;snapshot preview&quot;/&gt;
+</code></pre>
+</div>
+
+
+
+<h2>Configuration</h2>
+
+<p>
+    Here is a list of the configuration options:
+</p>
+<table class="listing">
+    <thead>
+    <tr>
+        <th nowrap>property / datatype</th>
+        <th>default</th>
+        <th>description</th>
+    </tr>
+    </thead>
+    <tr>
+        <td class="code">savelocal <div class="type">boolean</div></td>
+        <td class="code default">false</td>
+        <td class="description">
+            Enable local download support. No server side is required.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">originbaseurl <div class="type">string</div></td>
+        <td class="code default"></td>
+        <td class="description">
+            For cross origin work arounds, use this base url to a proxy location on the same domain as the page.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">serverurl <div class="type">string</div></td>
+        <td class="code default"></td>
+        <td class="description">
+            The location to the backend server for saving the images.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">tokenurl <div class="type">string</div></td>
+        <td class="code default"></td>
+        <td class="description">
+            The location of the backend server for obtaining a csrf token.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">token <div class="type">string</div></td>
+        <td class="code default"></td>
+        <td class="description">
+            The csrf token to use with the save request.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">type <div class="type">string</div></td>
+        <td class="code default">png</td>
+        <td class="description">
+            The image type to use for encoding either png or jpeg.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">quality <div class="type">string</div></td>
+        <td class="code default">1</td>
+        <td class="description">
+            The png / jpeg compression quality.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">origdimensions <div class="type">boolean</div></td>
+        <td class="code default">true</td>
+        <td class="description">
+            The use the raw dimensions of the video or else use the dimensions from the player.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">maxwidth <div class="type">number</div></td>
+        <td class="code default">true</td>
+        <td class="description">
+            Set the maximum width of the captured image and the height will be scaled to the new width.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">thumbnails <div class="type">boolean</div></td>
+        <td class="code default">false</td>
+        <td class="description">
+            Enable thumbnail creation after the image capture. This will be posted to the server or returned in the complete event.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">thumbnailwidth <div class="type">number</div></td>
+        <td class="code default">0</td>
+        <td class="description">
+            Set the thumbnail width. If no height is set, the height will be scaled to the new width.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">thumbnailheight <div class="type">number</div></td>
+        <td class="code default">0</td>
+        <td class="description">
+            Set the thumbnail height.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">success <div class="type">string</div></td>
+        <td class="code default">Capture Complete</td>
+        <td class="description">
+            The capture success notification message.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">error <div class="type">string</div></td>
+        <td class="code default">Capture Failed Try Again</td>
+        <td class="description">
+            The capture failure notification message.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">processing <div class="type">string</div></td>
+        <td class="code default">Processing Please Wait</td>
+        <td class="description">
+            The processing notification message.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">noinline <div class="type">string</div></td>
+        <td class="code default">Click Capture To Take Snapshot At The Current Time</td>
+        <td class="description">
+            For non-inline players like on Iphone this will notify the user to start capturing after exiting native player fullscreen.
+        </td>
+    </tr>
+
+    <tr>
+        <td class="code">thumbnail <div class="type">string</div></td>
+        <td class="code default">Generating Thumbnail</td>
+        <td class="description">
+            The thumbnail creation notification message.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">debug <div class="type">boolean</div></td>
+        <td class="code default">false</td>
+        <td class="description">
+            Display debug logs.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">captureswf <div class="type">string</div></td>
+        <td class="code default"></td>
+        <td class="description">
+            The location to the Flash proxy player for capturing.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">pauseOnCapture <div class="type">boolean</div></td>
+        <td class="code default">true</td>
+        <td class="description">
+            Pause the stream on capture.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">notify <div class="type">boolean</div></td>
+        <td class="code default">true</td>
+        <td class="description">
+            Display notifications.
+        </td>
+    </tr>
+</table>
+
+    <h3>Debug Player</h3>
+
+    <p>The supplied debug player can be useful for verbose console logging of the streaming functions. The debug config can be configured to enable / disable logging.</p>
+
+    <div class="box code">
+<pre><code class="javascript">
+    {
+    debug: true
+    }
+
+    snapshot: {
+     captureswf: "DebugVideoSnapshotPlayer-6.0.4.swf""
+    }
+</code></pre>
+    </div>
+
+
+<h3>Notification Plugin Configuration</h3>
+
+<p>
+    Here is a list of the configuration options:
+</p>
+<table class="listing">
+    <thead>
+    <tr>
+        <th nowrap>property / datatype</th>
+        <th>default</th>
+        <th>description</th>
+    </tr>
+    </thead>
+
+    <tr>
+        <td class="code">showDelay <div class="type">number</div></td>
+        <td class="code default">1000</td>
+        <td class="description">
+            The duration in milliseconds to fade in the notification.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">hideDelay <div class="type">number</div></td>
+        <td class="code default">1000</td>
+        <td class="description">
+            The duration in milliseconds to fade out the notification.
+        </td>
+    </tr>
+</table>
+
+
+<h3>Styling</h3>
+
+<p>The following css
+    classes are used by styling :</p>
+
+<table class="listing">
+    <thead>
+    <tr>
+        <th nowrap>stylename</th>
+        <th>example</th>
+        <th>description</th>
+    </tr>
+    </thead>
+
+    <tr>
+        <td class="code">snapshot.btn</td>
+        <td class="code">
+            .snapshot.btn {
+
+            width: 32px;
+            height: 25px;
+            top: 30px;
+            right: 15px;
+            position: absolute;
+            border-style:none;
+            opacity: 0.7;
+
+            font-family: 'snapshot';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            color: #FFFFFF;
+            font-size: 40px;
+
+            display: none;
+
+            }
+
+            .snapshot.btn:before {
+            content: "\e90f";
+            }
+
+            .snapshot.btn:hover {opacity: 1;}
+
+
+            .flowplayer.is-mouseover .snapshot.btn{ display: block; }
+            .flowplayer.is-mouseover.is-splash .snapshot.btn, .flowplayer.is-poster .snapshot.btn{ display: none; }
+        </td>
+        <td class="description">
+            The snapshot dock button. Uses web fonts for it's icon. Displaying is managed via css.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">notification</td>
+        <td class="code">
+            .notification {
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #CCCCCC;
+            border-radius: 10px;
+            margin-left: auto ;
+            margin-right: auto ;
+            }
+
+        </td>
+        <td class="description">
+            The Notification plugin style.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">notification.message</td>
+        <td class="code">
+            .notification.message {
+            color: #FFFFFF;
+            font-size: 12px;
+            }
+        </td>
+        <td class="description">
+            The notification message text styling.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">snapshot.preview</td>
+        <td class="code">
+            .snapshot.preview {
+            float: right;
+            width: 600px;
+
+            }
+        </td>
+        <td class="description">
+            The snapshot preview display style.
+        </td>
+    </tr>
+</table>
+
+
+
+
+<h3>Filename Configuration</h3>
+<p>To send a custom filename for the capture image configure this on the video config with a  `data-snapshotname` property with a time postfix format to add the current frame time: </p>
+
+<div class="box code">
+<pre><code class="html">
+    data-snapshotname=&quot;test-[time]&quot;&gt;
+</code></pre>
+</div>
+
+
+    <a name="api"></a>
+    <h2>JavaScript API</h2>
+
+    <h3>Methods</h3>
+
+    <p>
+        The api methods are exposed on the Flowplayer 6 api.
+    </p>
+
+    <div class="box code">
+<pre><code class="javascript">
+    player.capture();
+</code></pre>
+    </div>
+
+    <table class="listing">
+        <thead>
+        <tr>
+            <th class="col1">method</th>
+            <th class="col2">returns</th>
+            <th class="col3">description</th>
+        </tr>
+        </thead>
+        <tr>
+            <td class="code">
+                <strong>capture</strong>
+            </td>
+            <td class="code type"></td>
+            <td class="description">
+                Manually initiate the capture process.
+            </td>
+        </tr>
+    </table>
+
+
+    <h3>Events</h3>
+
+    <p>
+        The capture complete event returns data for the generated encoded still and thumbnail as a base64 data uri string. For Html5 captures it also returns the original canvas. For backend storing of captures the data from the server is also returned.
+    </p>
+
+    <div class="box code">
+<pre><code class="javascript">
+    player.on("capturecomplete",function(data) {
+
+    //data.canvas - the Html5 canvas
+    //data.image - the image data uri
+    //data.img - the data uri as an image.
+    //data.thumbnail - the thumbnail data uri
+    //data.thumbnailImg = the thumbnail data uri as an image.
+    //data.data - the data returned from the backend server
+
+    });
+</code></pre>
+    </div>
+
+    <table class="listing">
+        <thead>
+        <tr>
+            <th nowrap>Event</th>
+            <th style="width:450px">When does it fire?</th>
+        </tr>
+        </thead>
+        <tr>
+            <td class="code"><em>capturecomplete(data)</em></td>
+            <td class="description">
+                Html5 and Flash Version. Fired on a capture completion status and the image has been saved successfully onto the backend server. The image argument contains the generated canvas with the `canvas` property and the base64 encoded image is sent to the callback event with the `image` property to be used for displaying a preview image in the html.
+                The data argument contains the data returned from the backend server.
+            </td>
+        </tr>
+    </table>
+
+
+
+
+<h3>Token Server</h3>
+
+<p>The configured token server must return a Access-Control-Allow-Origin for Ajax requests and a csrf hash in a json object string like so: </p>
+
+<div class="box code">
+<pre><code class="javascript">
+    {"token":"f38c9bd8483916513f057a6ea71a6d24"}
+</code></pre>
+</div>
+
+<h3>Backend Server</h3>
+
+<p>Included is a backend server which demonstrates handling the cors headers required for Ajax requests, filtering the post and the image sent as a base64 encoded string. The server should provide the parameter and token
+    hash security and base64 decode the image as a string and store on the server. The following properties are required or optional: </p>
+
+<table class="listing">
+    <thead>
+    <tr>
+        <th nowrap>property / datatype</th>
+        <th>required</th>
+        <th>description</th>
+    </tr>
+    </thead>
+
+    <tr>
+        <td class="code">image <div class="type">string</div></td>
+        <td class="code default"></td>
+        <td class="description">
+            The image stored as a base64 encoded string.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">thumbnail <div class="type">string</div></td>
+        <td class="code default"></td>
+        <td class="description">
+            The thumbnail image stored as a base64 encoded string when available.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">type <div class="type">string</div></td>
+        <td class="code default">true</td>
+        <td class="description">
+            The image type chosen either jpg or png.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">token <div class="type">string</div></td>
+        <td class="code default">false</td>
+        <td class="description">
+            The csrf token to use with the save request, if a token is configured this can be used to check the request.
+        </td>
+    </tr>
+    <tr>
+        <td class="code">name <div class="type">string</div></td>
+        <td class="code default">false</td>
+        <td class="description">
+            The name of the image to use when saving.
+        </td>
+    </tr>
+</table>
+
+
+<h3>CORS Requirements For Cloudfront</h3>
+
+<p>Cloudfront now supports CORS and delivers OPTIONS requests. </p>
+<p>To enable OPTIONS support in Cloudfront goto the "Edit Behaviour" section of the Cloudfront distribution, check "OPTIONS" in the "Cached HTTP Methods" section and add all the suggested Whitelist Headers selection.</p>
+<p>This information may change but this should make it function correctly. The OPTIONS request for CORS is sent before the actual request as is required to make capture possible.</p>
+
+
+
+<h3>CORS Proxy</h3>
+
+<p>A CORS proxy is required to work around limitations with cross origin support on the video tag like with IE and Safari.</p>
+<p>Using either Apache or Nginx server configs assuming the proxy module is enabled can be achieved like so:</p>
+
+
+<p>Apache:</p>
+<div class="box code">
+<pre><code class="javascript">
+    ProxyPass /video/ //videos.electroteque.org/
+    ProxyPassReverse /video/ //videos.electroteque.org/
+</code></pre>
+</div>
+
+<p>Nginx:</p>
+<div class="box code">
+<pre><code class="javascript">
+    location /video/ {
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-NginX-Proxy true;
+        proxy_pass //videos.electroteque.org/;
+        proxy_redirect off;
+    }
+</code></pre>
+</div>
+
+<p>Which translates to:</p>
+
+<div class="box code">
+<pre><code class="javascript">
+    http://origin.electroteque.org/video/big_buck_bunny_480p_h264.mp4
+</code></pre>
+</div>
+
+
+    <a name="playlistExample"></a>
+    <h2><em>Playlist</em> Example</h2>
+    <p>
+        This example demonstrates configuring the snapshot names for within a playlist.
+    </p>
+    <p>
+        Flowplayer has no means to configure clip properties within each playlist item so this resolves that issue.
+    </p>
+
+    <p>
+        For single playlists or json configurations the configuration can be added to the `snapshot` property instead.
+    </p>
+
+
+
+    <div width="600px" id="playlistcontainer">
+        <div>
+            <div id="playlist" class="is-snapshot"  data-embed="false">
+                <a class="fp-prev">prev</a>
+                <a class="fp-next">next</a>
+            </div>
+        </div>
+
+        <div class="snapshot preview"></div>
+    </div>
+
+    <br clear="all" />
+
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            flowplayer("#playlist", {
+
+                snapshot: {
+                    //setups like this overwrite the global config. They are required here.
+                    debuglog: true,
+                    serverurl: "https://flowplayer.electroteque.org/snapshot/index/save",
+                    tokenurl: "https://flowplayer.electroteque.org/snapshot/index/token",
+                    success: "Capture Complete",
+                    error: "Capture Failed Try Again",
+                    type: "png",
+                    quality: 1,
+                    originbaseurl: "https://flowplayer.electroteque.org/video/"
+                },
+                playlist: [
+                    {
+                        snapshotname: "test2-[time]",
+                        sources: [
+                            {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+                            {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+                            {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+                        ]
+                    },
+                    {
+                        snapshotname: "test2-[time]",
+                        sources: [
+                            {type: "video/webm", src: "//videos.electroteque.org/bitrate/elephants_dream_2000k.webm"},
+                            {type: "video/mp4", src: "//videos.electroteque.org/bitrate/elephants_dream_2000k.mp4"},
+                            {type: "video/ogg", src: "//videos.electroteque.org/bitrate/elephants_dream_2000k.ogv"}
+                        ]
+                    }
+                ]
+
+            });
+        });
+    </script>
+
+
+
+    <div class="box code">
+<pre><code class="javascript">
+    $(function () {
+
+    flowplayer("#playlist", {
+
+    snapshot: {
+    //setups like this overwrite the global config. They are required here.
+    debuglog: true,
+    serverurl: "https://flowplayer.electroteque.org/snapshot/index/save",
+    tokenurl: "https://flowplayer.electroteque.org/snapshot/index/token",
+    success: "Capture Complete",
+    error: "Capture Failed Try Again",
+    type: "png",
+    quality: 1,
+    originbaseurl: "https://flowplayer.electroteque.org/video/"
+    },
+    playlist: [
+    {
+    snapshotname: "test2-[time]",
+    sources: [
+    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+    ]
+    },
+    {
+    snapshotname: "test2-[time]",
+    sources: [
+    {type: "video/webm", src: "//videos.electroteque.org/bitrate/elephants_dream_2000k.webm"},
+    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/elephants_dream_2000k.mp4"},
+    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/elephants_dream_2000k.ogv"}
+    ]
+    }
+    ]
+
+    });
+    });
+</code></pre>
+    </div>
+
+    <br clear="all" />
+
+
+
+
+<a name="localExample"></a>
+<h2><em>Local Download</em> Example</h2>
+<p>
+    This example demonstrates locally saving the generated snapshot image.
+</p>
+
+<p>
+    To enable the locally downloading of snapshot images  configure the `saveLocal` config therefore a backend server is not required.
+</p>
+
+<div width="600px" id="localcontainer">
+    <div id="local" class="is-snapshot"  data-embed="false"></div>
+    <div class="snapshot preview"/>
+</div>
+
+<br clear="all" />
+
+<script>
+
+    $(function () {
+
+        var local = flowplayer("#local", {
+
+
+            snapshot: {
+                //setups like this overwrite the global config. They are required here.
+                savelocal: true,
+                originbaseurl: "https://flowplayer.electroteque.org/video/"
+            },
+            clip: {
+                snapshotname: "test2-[time]",
+                sources: [
+                    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+                    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+                    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+                ]
+            }
+
+        });
+
+        local.bind("capturecomplete", function(api, data) {
+            console.log("Capture Complete: ", data);
+        });
+    });
+</script>
+
+
+<div class="box code">
+<pre><code class="javascript">
+    $(function () {
+
+    var local = flowplayer("#local", {
+
+
+    snapshot: {
+    //setups like this overwrite the global config. They are required here.
+    savelocal: true,
+    originbaseurl: "https://flowplayer.electroteque.org/video/"
+    },
+    clip: {
+    snapshotname: "test2-[time]",
+    sources: [
+    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+    ]
+    }
+
+    });
+
+
+    local.bind("capturecomplete", function(api, data) {
+    console.log("Capture Complete: ", data);
+    });
+    });
+</code></pre>
+</div>
+
+<br clear="all" />
+
+
+<a name="thumbnailExample"></a>
+<h2><em>Thumbnail Generator</em> Example</h2>
+<p>
+    This example demonstrates generated an image capture and a thumbnail capture.
+</p>
+
+<p>
+    To enable the thumbnail capture configure the `thumbnails` config.
+</p>
+
+<div width="600px" id="thumbnailscontainer">
+    <div id="thumbnails" class="is-snapshot is-splash"  data-embed="false"></div>
+    <div style="float:left; width: 100%">
+        <div class="snapshot preview" style="float:left;width:600px;"></div>
+        <div class="snapshot thumbpreview" style="float:left;width:140px;"></div>
+    </div>
+</div>
+
+
+<br clear="all" />
+
+<script>
+
+    $(function () {
+
+        var thumbnails = flowplayer("#thumbnails", {
+
+
+            snapshot: {
+                //setups like this overwrite the global config. They are required here.
+                thumbnails: true,
+                thumbnailwidth: 108,
+                thumbnailheight: 60,
+                originbaseurl: "https://flowplayer.electroteque.org/video/"
+            },
+            clip: {
+                snapshotname: "test2-[time]",
+                sources: [
+                    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+                    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+                    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+                ]
+            }
+
+        });
+
+        thumbnails.bind("capturecomplete", function(api, data) {
+            console.log("Capture Complete");
+            console.log("Image : ", data.image);
+            console.log("Thumbnail : ", data.thumbnail);
+        });
+
+    });
+
+</script>
+
+
+<div class="box code">
+<pre><code class="html">
+    $(function () {
+
+    var thumbnails = flowplayer("#thumbnails", {
+
+
+    snapshot: {
+    //setups like this overwrite the global config. They are required here.
+    thumbnails: true,
+    thumbnailwidth: 108,
+    thumbnailheight: 60,
+    originbaseurl: "https://flowplayer.electroteque.org/video/"
+    },
+    clip: {
+    snapshotname: "test2-[time]",
+    sources: [
+    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+    ]
+    }
+
+    });
+
+    thumbnails.bind("capturecomplete", function(api, data) {
+    console.log("Capture Complete");
+    console.log("Image : ", data.image);
+    console.log("Thumbnail : ", data.thumbnail);
+    });
+
+    });
+</code></pre>
+</div>
+
+<p>A preview display can be enabled to display the captured resized thumbnail using a css class name `snapshot thumbpreview` </p>
+
+<div class="box code">
+<pre><code class="html">
+    &lt;div class=&quot;snapshot thumbpreview&quot;/&gt;
+</code></pre>
+</div>
+
+
+<br clear="all" />
+
+
+
+    <a name="rtmpExample"></a>
+    <h2><em>RTMP Capture</em> Example</h2>
+    <p>
+        This example demonstrates generated an image capture from an RTMP VOD / Live stream.
+    </p>
+
+    <p>
+        Cloudfront RTMP generally has video sample access restrictions but the new Flash 11.6 capture features works around this.
+    </p>
+
+    <p>
+        This requires the proxy capture Flash player due to restrictions with the no Flash plugin support with the default Flash players in Flowplayer 6.
+    </p>
+
+    <p>
+        Using the `keepconn` config keeps the second connection active for faster captures of new frames. The default is to close the connection and reconnect.
+    </p>
+
+    <p>
+        It is possible to provide an external RTMP player on request with capture features built in to prevent seperate connections and faster captures.
+    </p>
+
+
+
+    <div width="600px" id="rtmpcontainer">
+        <div id="rtmp" class="is-snapshot is-splash"  data-embed="false"></div>
+        <div style="float:left; width: 100%">
+            <div class="snapshot preview" style="float:left;width:600px;"></div>
+        </div>
+    </div>
+
+
+    <br clear="all" />
+
+    <script>
+
+        $(function () {
+
+            var rtmpPlayer = flowplayer("#rtmp", {
+                debug: true,
+
+                snapshot: {
+                    keepconn: true,
+                    maxwidth: 600,
+                    //setups like this overwrite the global config. They are required here.
+                    originbaseurl: "https://flowplayer.electroteque.org/video/"
+                },
+                clip: {
+                    snapshotname: "test2-[time]",
+                    sources: [
+                        { type: "video/flash", src: "mp4:bitrate/big_buck_bunny_2000k.mp4"},
+                        {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+                        {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+                        {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+                    ]
+                },
+                rtmp: "rtmp://rtmp.electroteque.org/cfx/st"
+            });
+
+            rtmpPlayer.bind("capturecomplete", function(api, data) {
+                console.log("Capture Complete");
+                console.log("Image : ", data.image);
+            });
+
+        });
+
+    </script>
+
+
+    <div class="box code">
+<pre><code class="html">
+    $(function () {
+
+    var rtmpPlayer = flowplayer("#rtmp", {
+
+
+    snapshot: {
+    keepconn: true,
+    maxwidth: 600,
+    //setups like this overwrite the global config. They are required here.
+    originbaseurl: "https://flowplayer.electroteque.org/video/"
+    },
+    clip: {
+    snapshotname: "test2-[time]",
+    sources: [
+    { type: "video/flash", src: "mp4:bitrate/big_buck_bunny_2000k.mp4"},
+    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+    ]
+    },
+    rtmp: "rtmp://rtmp.electroteque.org/cfx/st"
+    });
+
+    rtmpPlayer.bind("capturecomplete", function(api, data) {
+    console.log("Capture Complete");
+    console.log("Image : ", data.image);
+    });
+
+    });
+</code></pre>
+    </div>
+
+    <a name="hlsExample"></a>
+    <h2><em>HLS Capture</em> Example</h2>
+
+    <p>
+        This example demonstrates generated an image capture for a HLS stream using either Html5 or Flash capture.
+    </p>
+
+    <p>
+        With Flash HLS there is a general security issue that requires a work around in Flash. This is also not required with the new Flash 11.6 capture features.
+    </p>
+
+    <p>
+        This requires the proxy capture Flash player due to restrictions with the no Flash plugin support with the default Flash players in Flowplayer 6.
+    </p>
+
+    <p>
+        By default the HLS proxy capture feature will reuse the loaded manifest for faster captures. With a multi bitrate manifest it will choose the largest bitrate and frame for capture.
+    </p>
+
+    <p>
+        It is possible to provide an external HLS Flash player on request with capture features built in to prevent seperate connections and faster captures.
+    </p>
+
+
+    <div width="600px" id="hlscontainer">
+        <div id="hls" class="is-snapshot is-splash"  data-embed="false"></div>
+        <div style="float:left; width: 100%">
+            <div class="snapshot preview" style="float:left;width:600px;"></div>
+        </div>
+    </div>
+
+
+    <br clear="all" />
+
+    <script>
+
+        $(function () {
+
+            var hlsPlayer = flowplayer("#hls", {
+
+
+                snapshot: {
+                    maxwidth: 600,
+                    //setups like this overwrite the global config. They are required here.
+                    originbaseurl: "https://flowplayer.electroteque.org/video/"
+                },
+                clip: {
+                    snapshotname: "test2-[time]",
+                    sources: [
+                        { type: "application/x-mpegurl", src: "//videos.electroteque.org/hls/bigbuckbunny/playlist.m3u8"},
+                        {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+                        {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+                        {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+                    ]
+                }
+            });
+
+            hlsPlayer.bind("capturecomplete", function(api, data) {
+                console.log("Capture Complete", data);
+                console.log("Image : ", data.image);
+            });
+
+        });
+
+    </script>
+
+
+    <div class="box code">
+<pre><code class="html">
+    $(function () {
+
+    var hlsPlayer = flowplayer("#hls", {
+
+
+    snapshot: {
+    keepconn: true,
+    maxwidth: 600,
+    //setups like this overwrite the global config. They are required here.
+    originbaseurl: "https://flowplayer.electroteque.org/video/"
+    },
+    clip: {
+    snapshotname: "test2-[time]",
+    sources: [
+    { type: "application/x-mpegurl", src: "https://videos.electroteque.org/hls/bigbuckbunny/playlist.m3u8"},
+    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+    ]
+    }
+    });
+
+    hlsPlayer.bind("capturecomplete", function(api, data) {
+    console.log("Capture Complete", data);
+    console.log("Image : ", data.image);
+    });
+
+    });
+</code></pre>
+    </div>
+
+    <a name="hdsExample"></a>
+    <h2><em>Adobe Http Streaming Capture</em> Example</h2>
+
+    <p>
+        This example demonstrates generated an image capture for a HDS stream loading a provided custom HDS player with capture features enabled.
+    </p>
+
+    <p>
+        The Adobe HTTP Streaming feature is a seperate feature from Flowplayer therefore is possible to provide a custom player and does not need a proxy capture player.
+    </p>
+
+    <p>
+        HDS also suffers the same security restrictions in Flash as Flash HLS therefore the new capture features enabled works around this.
+    </p>
+
+    <p>
+        The HDS player uses Flash GPU accelerated playback by default that is not supported with the default Flowplayer 6 players therefore requires to switch to a normal video display for capturing temporarily.
+    </p>
+
+    <p>
+        When capturing the display may seem intermittent switching from GPU rendering mode to software mode. If this is not desirable the config `useHardware` can be used to disable Stage video.
+    </p>
+
+
+    <div width="600px" id="hdscontainer">
+        <div id="hds" class="is-snapshot is-splash"  data-embed="false"></div>
+        <div style="float:left; width: 100%">
+            <div class="snapshot preview" style="float:left;width:600px;"></div>
+        </div>
+    </div>
+
+
+    <br clear="all" />
+
+    <script>
+
+        $(function () {
+
+            var hdsPlayer = flowplayer("#hds", {
+
+
+                snapshot: {
+                    //maxwidth: 600,
+                    //setups like this overwrite the global config. They are required here.
+                    originbaseurl: "https://flowplayer.electroteque.org/video/"
+                },
+                flash: {
+                    //useHardware: false,
+                    //initialIndex: 1
+                },
+                swf: "HdsCapturePlayer-6.0.4.swf",
+                clip: {
+                    snapshotname: "test2-[time]",
+
+                    sources: [
+                        {type:"application/f4m+xml", src: "//videos.electroteque.org/hds/nodrm/bbb/bbb.f4m"},
+                        {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+                        {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+                        {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+                    ]
+                }
+            });
+
+            hdsPlayer.bind("capturecomplete", function(api, data) {
+                console.log("Capture Complete", data);
+                console.log("Image : ", data.image);
+            });
+
+        });
+
+    </script>
+
+    <div class="box code">
+<pre><code class="html">
+    $(function () {
+
+    var hdsPlayer = flowplayer("#hds", {
+
+
+    snapshot: {
+    //maxwidth: 600,
+    //setups like this overwrite the global config. They are required here.
+    originbaseurl: "https://flowplayer.electroteque.org/video/"
+    },
+    flash: {
+    //useHardware: false,
+    //initialIndex: 1
+    },
+    swf: "HdsCapturePlayer-6.0.4.swf",
+    clip: {
+    snapshotname: "test2-[time]",
+
+    sources: [
+    {type:"application/f4m+xml", src: "//videos.electroteque.org/hds/nodrm/bbb/bbb.f4m"},
+    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+    ]
+    }
+    });
+
+    hdsPlayer.bind("capturecomplete", function(api, data) {
+    console.log("Capture Complete", data);
+    console.log("Image : ", data.image);
+    });
+
+    });
+</code></pre>
+    </div>
+
+
+<a name="jsapiExample"></a>
+<h2><em>JS API</em> Example</h2>
+<p>
+    This example demonstrates using the javascript method api to create the capture and a javascript event to manage the capture completion.
+    The base64 encoded image is sent to the preview layer for displaying the preview image in the html. The
+    dock button is also configured to be disabled.
+</p>
+
+<div width="600px" id="jsapicontainer">
+    <div id="jsapi" class="is-snapshot " data-embed="false"></div>
+
+
+    <div class="snapshot preview"/>
+</div>
+
+<br clear="all" />
+
+
+
+<script>
+
+    $(function () {
+
+        var api = flowplayer("#jsapi", {
+
+
+            snapshot: {
+                //setups like this overwrite the global config. They are required here.
+                debuglog: true,
+                dockbutton: false,
+                serverurl: "https://flowplayer.electroteque.org/snapshot/index/save",
+                tokenurl: "https://flowplayer.electroteque.org/snapshot/index/token",
+                success: "Capture Complete",
+                error: "Capture Failed Try Again",
+                type: "png",
+                quality: 1,
+                originbaseurl: "https://flowplayer.electroteque.org/video/"
+            },
+            clip: {
+                snapshotname: "test2-[time]",
+                sources: [
+                    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+                    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+                    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+                ]
+            }
+
+        });
+
+
+        api.on("capturecomplete", function(api, data) {
+
+            console.log("Server Returned With Data: ", idata);
+        });
+
+        function docapture(e) {
+            e.preventDefault();
+
+
+            api.capture();
+        }
+
+        $("#capturebtn").click(docapture);
+
+
+
+    });
+
+
+</script>
+
+<button id="capturebtn">Do Capture</button>
+
+
+
+<div class="box code">
+<pre><code class="javascript">
+    $(function () {
+
+    var api = flowplayer("#jsapi", {
+
+
+    snapshot: {
+    //setups like this overwrite the global config. They are required here.
+    debuglog: true,
+    dockbutton: false,
+    serverurl: "https://flowplayer.electroteque.org/snapshot/index/save",
+    tokenurl: "https://flowplayer.electroteque.org/snapshot/index/token",
+    success: "Capture Complete",
+    error: "Capture Failed Try Again",
+    type: "png",
+    quality: 1,
+    originbaseurl: "https://flowplayer.electroteque.org/video/"
+    },
+    clip: {
+    snapshotname: "test2-[time]",
+    sources: [
+    {type: "video/webm", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.webm"},
+    {type: "video/mp4", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.mp4"},
+    {type: "video/ogg", src: "//videos.electroteque.org/bitrate/big_buck_bunny_2000k.ogv"}
+    ]
+    }
+
+    });
+
+
+    api.on("capturecomplete", function(api, data) {
+
+    console.log("Server Returned With Data: ", idata);
+    });
+
+    function docapture(e) {
+    e.preventDefault();
+
+
+    api.capture();
+    }
+
+    $("#capturebtn").click(docapture);
+
+
+
+    });
+
+</code></pre>
+</div>
+
+
+
+<h2>CORS Rules Requirements</h2>
+
+<p>For this feature to work successfully both the backend server and the video hosting server require <a href="http://enable-cors.org/">Cross Origin Resource Sharing</a> rules to be enabled in the headers of the request.<br>
+   This is required to enable cross origin Ajax requests when posting the captured image data and to be able to gain access to the video data within a Html5 video tag.
+</p>
+
+<p>
+   The header of the cors request must expose a `Access-Control-Allow-Origin` header with either a multiple list of domains including ports if using ports or an asterix wildcard to allow all domains. <br>
+    A `Access-Control-Allow-Methods` can be exposed to control what request methods are allowed. For authenticated logins with cookies the `Access-Control-Allow-Credentials` header must be enabled
+    and the feature will pass cookie sessions and other cookies along with the request.
+</p>
+
+<p>
+    An example request header can look like the following:
+</p>
+
+<div class="box code">
+<pre><code class="javascript">
+    Access-Control-Allow-Origin: http://localhost:8000
+    Access-Control-Allow-Methods: GET
+    Access-Control-Allow-Headers: Content-Type, Accept
+    Access-Control-Allow-Credentials: true
+    Content-Type: application/json
+</code></pre>
+</div>
+
+<h3>Testing CORS Server Requests</h3>
+
+<p>
+    CORS server requests can be initiated with the following curl command:
+</p>
+
+<div class="box code">
+<pre><code class="javascript">
+    curl -I -H "Origin: http://localhost:8000" http://path/to/server
+</code></pre>
+</div>
+
+<h3>Enabling CORS on S3</h3>
+
+<p>
+    Follow the guide <a hef="http://docs.amazonwebservices.com/AmazonS3/latest/dev/cors.html">here</a> to enable CORS rules on the bucket. Cloudfront does not function just yet because Chrome will send an OPTIONS request method which it does not allow. <br><br>
+
+    The CORS header should look like the following:
+</p>
+
+<div class="box code">
+<pre><code class="javascript">
+    Access-Control-Allow-Origin: http://localhost:8000
+    Access-Control-Allow-Methods: GET, HEAD
+    Access-Control-Max-Age: 3000
+    Access-Control-Allow-Credentials: true
+    Vary: Origin, Access-Control-Request-Headers, Access-Control-Request-Method
+</code></pre>
+</div>
+
+
+    <h2>Security Sandbox Requirements For The Flash Fallback Version</h2>
+
+    <h3>Cross Domain Policy</h3>
+
+    <p>To gain access to the video sample data for http based streams and for the backend service both require a cross domain policy file named `crossdomain.xml`
+        and placed into the top level location of that domain or configured with the `policyURL` config.</p>
+
+    <div class="box code">
+<pre><code class="xml">
+    &lt;cross-domain-policy xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;http://www.adobe.com/xml/schemas/PolicyFile.xsd&quot;&gt;
+    &lt;allow-access-from domain=&quot;*.electroteque.org&quot;/&gt;
+    &lt;allow-access-from domain=&quot;localhost&quot;/&gt;
+    &lt;/cross-domain-policy&gt;
+</code></pre>
+    </div>
+
+
+
+<h2>Amazon S3 Client Side Upload Example</h2>
+
+<p>Included is a demo php script to upload the image captures directly to Amazon S3 using the <a href="http://www.plupload.com/">Plupload</a> project.</p>
+<p>The demo incorporates both the max width image scaling and thumbnail generator feature. Both the still and the thumbnail gets uploaded from an upload queue.</p>
+<p>Some customisations have been provided to deliver the still and thumbnail to seperate S3 paths. The still file can have a database record attatched to it, to be able to call a backend with the id after the upload has been completed.</p>
+<p>The PHP script is required to first generate the S3 policy and signature from supplied access and secret keys to be configured in the config.</p>
+
+<h3>Example Script</h3>
+
+<div class="box code">
+<pre><code class="javascript">
+
+$(document).ready(function() {
+
+var uploading = false;
+//plupload setup
+var uploader = new plupload.Uploader({
+browse_button: "hiddenButton",
+runtimes : 'html5,flash',
+//S3 bucket location
+url : 'https://<?php echo $bucket; ?>.s3.amazonaws.com:443/',
+multipart: true,
+//S3 policy and signature details
+multipart_params: {
+'key': '${filename}', // use filename as a key
+'Filename': '${filename}', // adding this to keep consistency across the runtimes
+'acl': 'public-read',
+'Content-Type': 'image/jpeg',
+'AWSAccessKeyId' : '<?php echo $accessKeyId; ?>',
+'policy': '<?php echo $policy; ?>',
+'signature': '<?php echo $signature; ?>'
+},
+
+//file filters
+filters : {
+//minimum image width
+min_img_width: 500,
+max_file_size : '10mb',
+mime_types: [
+{title : "Image files", extensions : "jpg,jpeg,png"}
+]
+},
+chunks : {
+size: '1mb',
+send_chunk_number: false // set this to true, to send chunk and total chunk numbers instead of offset and total bytes
+},
+dragdrop: false,
+flash_swf_url : 'js/Moxie.swf'
+});
+
+
+/**
+* Minimum width file filter
+*/
+plupload.addFileFilter('min_img_width', function(minRes, file, cb) {
+var self = this, img = new o.Image(), width;
+
+
+if (file.thumb)  {
+cb(true);
+return;
+}
+
+
+function finalize(result) {
+img.destroy();
+img = null;
+if (!result) {
+self.trigger('Error', {
+code : plupload.IMAGE_DIMENSIONS_ERROR,
+message : " Minimimum image width of " + minRes  + " pixels is required. Width is " + width,
+file : file
+});
+
+}
+cb(result);
+}
+
+img.onload = function() {
+width = img.width;
+finalize(img.width >= minRes);
+};
+
+img.onerror = function() {
+finalize(false);
+};
+
+img.load(file.getSource());
+});
+
+
+
+uploader.init();
+
+uploader.bind( "FilesAdded", function( uploader, files ) {
+
+for ( var i = 0 ; i < files.length ; i++ ) {
+console.log( "File added:", files[ i ].name );
+}
+
+$("#save").show();
+
+});
+
+uploader.bind('BeforeUpload', function(up, file) {
+//set a different S3 path for the thumbnail using the same filename.
+if('thumb' in file){
+file.loaded = 0;
+file.percent = 0;
+file.status = plupload.QUEUED;
+up.settings.multipart_params.key = 'thumbnails/'+file.name;
+} else {
+up.settings.multipart_params.key = 'stills/'+file.name;
+}
+
+
+});
+
+uploader.bind('UploadFile', function(up, file) {
+console.log("Upload started");
+});
+
+
+uploader.bind('UploadProgress', function(up, file) {
+console.log("Uploading");
+});
+
+uploader.bind('UploadComplete', function(up, file) {
+console.log("File Uploads Complete");
+uploading = false;
+});
+
+uploader.bind('Error', function(up, error) {
+console.log("Error", error);
+});
+
+
+
+uploader.bind('FileUploaded', function(up, file) {
+console.log("File Upload Complete", file);
+
+if (file.customData) {
+console.log("Update backend with id " + file.customData.id);
+}
+});
+
+
+$("#save").on("click", function() {
+uploader.start();
+});
+
+//flowplayer setup
+var api = flowplayer($("#s3"));
+
+//capture complete event. Here we start the S3 upload of the image and thumbnail
+api.bind("capturecomplete", function(e, api, image) {
+console.log("Capture Complete");
+//console.log("Image : ", image.image);
+//console.log("Thumbnail : ", image.thumbnail);
+
+if (uploading) return;
+
+uploading = true;
+
+var files = [];
+
+
+//setup the still image
+var file = new plupload.File(
+new o.File(null, {
+name: image.filename,
+data: image.image
+})
+);
+
+//setup a custom entry id for this image to update to a backend.
+file.customData = {
+id: 234
+};
+
+files.push(file);
+
+//setup the thumbnail image
+var file = new plupload.File(
+new o.File(null, {
+name: image.filename,
+data: image.thumbnail
+})
+);
+
+//this is required to be able to differentiate between the two to chang the S3 path above.
+file.thumb = true;
+
+files.push(file);
+
+uploader.addFile(files);
+
+});
+
+
+});
+</code></pre>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+</html>

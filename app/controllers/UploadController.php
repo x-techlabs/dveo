@@ -14,7 +14,7 @@ class UploadController extends BaseController
     public function upload()
     {
 
-    	$this->data['s3_backet'] = 'aceplayout';
+    	$this->data['s3_backet'] = 'dveo';
     	$this->data['aws_access_key_id'] = 'AKIAJWU4DYR6OMHE2YPQ';
     	$this->data['aws_secret_key'] = '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';
     	
@@ -31,7 +31,7 @@ class UploadController extends BaseController
     public function upload2()
     {
 
-    	$this->data['s3_backet'] = 'aceplayout';
+    	$this->data['s3_backet'] = 'dveo';
     	$this->data['aws_access_key_id'] = 'AKIAJWU4DYR6OMHE2YPQ';
     	$this->data['aws_secret_key'] = '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';
     	
@@ -87,7 +87,7 @@ class UploadController extends BaseController
         $video->source = "internal";
         $video->duration = 200;
         $video->thumbnail_name = '/images/'.$path.'.png';
-        $commandString = 'ffmpeg -ss 0:03 -i https://s3.amazonaws.com/aceplayout/'.$fileKey.' -vframes 1 /var/www/1stud.io/public_html/1stud/public/images/'.$path.'.png 2>&1';
+        $commandString = 'ffmpeg -ss 0:03 -i https://s3.amazonaws.com/dveo/'.$fileKey.' -vframes 1 /var/www/1stud.io/public_html/1stud/public/images/'.$path.'.png 2>&1';
         exec($commandString, $output);
 
         $timeString="00:00:00";
@@ -169,7 +169,7 @@ class UploadController extends BaseController
                     },
 
                     {
-                        "bucket": "aceplayout"
+                        "bucket": "dveo"
                     },
                     [
                         "starts-with",
@@ -209,7 +209,7 @@ class UploadController extends BaseController
     	
     	$form = array(
     			'key' => $filename,
-    			'AWSAccessKeyId' => 'AKIAJWU4DYR6OMHE2YPQ',	//aceplayout
+    			'AWSAccessKeyId' => 'AKIAJWU4DYR6OMHE2YPQ',	//dveo
     			'acl' => 'public-read',
     	);
     
@@ -221,7 +221,7 @@ class UploadController extends BaseController
                     },
     
                     {
-                        "bucket": "aceplayout"
+                        "bucket": "dveo"
                     },
                     [
                         "starts-with",
@@ -278,7 +278,7 @@ class UploadController extends BaseController
                     },
 
                     {
-                        "bucket": "aceplayout"
+                        "bucket": "dveo"
                         		
                     },
                     [
@@ -333,7 +333,7 @@ class UploadController extends BaseController
                     },
 
                     {
-                        "bucket": "aceplayout"
+                        "bucket": "dveo"
                         		
                     },
                     [
@@ -390,7 +390,7 @@ class UploadController extends BaseController
                     },
 
                     {
-                        "bucket": "aceplayout"
+                        "bucket": "dveo"
                         		
                     },
                     [
@@ -437,7 +437,7 @@ class UploadController extends BaseController
 
 		$form = array(
 			'key' => 'banners/' . $filename,
-			'AWSAccessKeyId' => 'AKIAJWU4DYR6OMHE2YPQ', //aceplayout
+			'AWSAccessKeyId' => 'AKIAJWU4DYR6OMHE2YPQ', //dveo
 			'acl' => 'public-read',
 		);
 		$form['policy'] = '{
@@ -448,7 +448,7 @@ class UploadController extends BaseController
                     },
 
                     {
-                        "bucket": "aceplayout"
+                        "bucket": "dveo"
                         		
                     },
                     [
@@ -497,10 +497,10 @@ class UploadController extends BaseController
 
         $form = array(
             'key' => 'banners/' . $filename,
-            'AWSAccessKeyId' => 'AKIAJWU4DYR6OMHE2YPQ', //aceplayout
+            'AWSAccessKeyId' => 'AKIAJWU4DYR6OMHE2YPQ', //dveo
             'acl' => 'public-read',
         );
-        //"bucket": "aceplayout"
+        //"bucket": "dveo"
         $form['policy'] = '{
             "expiration": "2020-12-01T12:00:00.000Z",
                 "conditions": [
@@ -509,7 +509,7 @@ class UploadController extends BaseController
                     },
 
                     {
-                        "bucket": "aceplayout"
+                        "bucket": "dveo"
                         		
                     },
                     [
@@ -554,10 +554,10 @@ class UploadController extends BaseController
        
         $form = array(
             'key' => 'logos-poster/' . $filename,
-            'AWSAccessKeyId' => 'AKIAJWU4DYR6OMHE2YPQ', //aceplayout
+            'AWSAccessKeyId' => 'AKIAJWU4DYR6OMHE2YPQ', //dveo
             'acl' => 'public-read',
         );
-        //"bucket": "aceplayout"
+        //"bucket": "dveo"
         $form['policy'] = '{
             "expiration": "2020-12-01T12:00:00.000Z",
                 "conditions": [
@@ -566,7 +566,7 @@ class UploadController extends BaseController
                     },
 
                     {
-                        "bucket": "aceplayout"
+                        "bucket": "dveo"
                         		
                     },
                     [
@@ -773,7 +773,7 @@ class UploadController extends BaseController
     {
         $panda_config = array(
             'api_host' => 'api.pandastream.com',
-            //'cloud_id' => '591912193190d9ccdd618f8596a8a032', //aceplayout
+            //'cloud_id' => '591912193190d9ccdd618f8596a8a032', //dveo
             //'cloud_id' => '436176323a425287c22a84a50f49e908', //ACE
         	'cloud_id' => '8d68d284045f40d9d6358740d1f47dae', //1stud
         	//telestream
@@ -827,7 +827,7 @@ class UploadController extends BaseController
     	
         $panda_config = array(
             'api_host' => 'api.pandastream.com',
-            //'cloud_id' => '591912193190d9ccdd618f8596a8a032', //aceplayout
+            //'cloud_id' => '591912193190d9ccdd618f8596a8a032', //dveo
             //'cloud_id' => '436176323a425287c22a84a50f49e908', //ACE
         	'cloud_id' => '8d68d284045f40d9d6358740d1f47dae', //1stud Factory ID: 8d68d284045f40d9d6358740d1f47dae
         		
@@ -900,7 +900,7 @@ class UploadController extends BaseController
 		                            	//$status = Video::where('file_name', '=', $video_id)->update(array(
 		                            	$status = Video::where('job_id', '=', $video_id)->update(array(
 		                            			'thumbnail_name'=> 'https://onestudio.imgix.net/'.$hd_file_name.'_1.jpg'.'?w=266&h=150&fit=crop&crop=entropy&auto=format,enhance&q=60',
-		                            			//'thumbnail_name'=> 'https://s3.amazonaws.com/aceplayout/'.$mp4id.'_1.jpg',
+		                            			//'thumbnail_name'=> 'https://s3.amazonaws.com/dveo/'.$mp4id.'_1.jpg',
 		                            			//'thumbnail_name'=> 'https://s3-us-west-2.amazonaws.com/prolivestream/videos/'.$mp4id.'_1.jpg',
 		                            			'file_name' => $hd_file_name,
 		                            			'video_format' => 'mp4',
@@ -1012,7 +1012,7 @@ class UploadController extends BaseController
         
         $dveo = DVEO::getInstance('198.241.44.164', 25599, 'Hn7P67583N9m5sS');
 
-        $dveo->upload_video($channel_id, 'https://s3.amazonaws.com/aceplayout/'.$video_name.'.mp4', $video_name);
+        $dveo->upload_video($channel_id, 'https://s3.amazonaws.com/dveo/'.$video_name.'.mp4', $video_name);
         //$dveo->upload_video($channel_id, 'https://s3-us-west-2.amazonaws.com/prolivestream/videos/'.$video_name.'.mp4', $video_name);
         //https://s3-us-west-2.amazonaws.com/prolivestream/videos/e604fe98_42b5_232a_df27_9cb02640d88f.mp4
 

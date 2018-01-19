@@ -417,7 +417,7 @@ class VodTranscoderController extends BaseController
 		$video->title        		= $payload['title'];
 		$video->description  		= $payload['description'];
                 $video->channel_id              = 13;
-		$video->thumbnail_name 		= "https://s3.amazonaws.com/aceplayout/" . $payload['thumbnail_name'];
+		$video->thumbnail_name 		= "https://s3.amazonaws.com/dveo/" . $payload['thumbnail_name'];
 		$video->start_time 			= $payload['start_time'];
 		$video->duration 			= $payload['duration'];
 		$video->file_name 			= $payload['file_name'];

@@ -243,7 +243,7 @@
             debug: true,
             element: document.getElementById('fine-uploader'),
             request: {
-                endpoint: 'https://aceplayout.s3.amazonaws.com',
+                endpoint: 'https://dveo.s3.amazonaws.com',
                 accessKey: 'AKIAJWU4DYR6OMHE2YPQ'
             },
             signature: {

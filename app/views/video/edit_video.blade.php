@@ -6,7 +6,7 @@
             {{-- TV app image --}}
             <div class="col-md-8">
                 {{ Form::open(array(
-				'url' => 'https://aceplayout.s3.amazonaws.com/',
+				'url' => 'https://dveo.s3.amazonaws.com/',
 				'class' => 'form-horizontal amazon_playlist_tvapp_image',
 				'enctype' => 'multipart/form-data'
 				)) }}
@@ -26,7 +26,7 @@
 			{{-- Mobile-Web image --}}
 			<div class="col-md-8">
 				{{ Form::open(array(
-				'url' => 'https://aceplayout.s3.amazonaws.com/',
+				'url' => 'https://dveo.s3.amazonaws.com/',
 				'class' => 'form-horizontal amazon_playlist_mobileweb_image',
 				'enctype' => 'multipart/form-data'
 				)) }}
@@ -46,7 +46,7 @@
             {{-- Custom Poster --}}
             <div class="col-md-4">
                 {{ Form::open(array(
-				'url' => 'https://aceplayout.s3.amazonaws.com/',
+				'url' => 'https://dveo.s3.amazonaws.com/',
 				'class' => 'form-horizontal amazon_playlist_poster_image',
 				'enctype' => 'multipart/form-data'
 				)) }}
@@ -70,7 +70,7 @@
                 </tr></table>
                 <div id = "poster_image_wrapper" class='controls div_for_poster_image_part'>
                     <h4 class="control-label">Poster</h4>
-                    <img id="poster_image" onerror="$('#poster_image_wrapper img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/aceplayout/banners/channel_{{ BaseController::get_channel_id() }}_poster_video_{{ $video->id }}.jpg" class="poster_image">
+                    <img id="poster_image" onerror="$('#poster_image_wrapper img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/dveo/banners/channel_{{ BaseController::get_channel_id() }}_poster_video_{{ $video->id }}.jpg" class="poster_image">
                 </div>
                 <div id="videoForm" class="content_list">
                     <!-- Name -->
@@ -190,7 +190,7 @@
 
                                         <div id = "mobileweb_img_wrapper" class='controls div_for_feature_image_part'>
                                             <h4>Mobile-Web TV</h4>
-                                            <img id="mobileweb_image" onerror="$('#mobileweb_img_wrapper img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/aceplayout/banners/channel_{{ BaseController::get_channel_id() }}_mobileweb_video_{{ $video->id }}.jpg" class="banner1 col-md-4">
+                                            <img id="mobileweb_image" onerror="$('#mobileweb_img_wrapper img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/dveo/banners/channel_{{ BaseController::get_channel_id() }}_mobileweb_video_{{ $video->id }}.jpg" class="banner1 col-md-4">
                                         </div>
                                     </ul>
                                 </li>

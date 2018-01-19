@@ -221,9 +221,9 @@ $(document).ready(function(){
                   
 
                     if($('.banner1').attr('src').indexOf('images/noLogo.png') !== -1) {
-                       $('.banner1').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_tvapp_playlist_'+$("#tvapp_playlist_id").val()+'.jpg');
+                       $('.banner1').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_tvapp_playlist_'+$("#tvapp_playlist_id").val()+'.jpg');
                     } else {
-                       $('.banner1').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_tvapp_playlist_'+$("#tvapp_playlist_id").val() +'.jpg?'+ Math.random());
+                       $('.banner1').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_tvapp_playlist_'+$("#tvapp_playlist_id").val() +'.jpg?'+ Math.random());
 
                         //$('.banner1').attr('src', $('.banner1').attr('src') + Math.random());
                     }
@@ -335,9 +335,9 @@ $(document).ready(function(){
 			},
 			done: function (event, data) {
 				if($('#mobileweb_image').attr('src').indexOf('images/noLogo.png') !== -1) {
-					$('#mobileweb_image').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_mobileweb_playlist_'+$("#tvapp_playlist_id").val()+'.jpg');
+					$('#mobileweb_image').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_mobileweb_playlist_'+$("#tvapp_playlist_id").val()+'.jpg');
 				} else {
-					$('#mobileweb_image').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_mobileweb_playlist_'+$("#tvapp_playlist_id").val() +'.jpg?'+ Math.random());
+					$('#mobileweb_image').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_mobileweb_playlist_'+$("#tvapp_playlist_id").val() +'.jpg?'+ Math.random());
 				}
 				$('#fileupload4').removeClass('logoUploadAfter');
 			}
@@ -436,9 +436,9 @@ $(document).ready(function(){
                 console.log(data);
 
                 if($('.logo1').attr('src').indexOf('images/noLogo.png') !== -1) {
-                    $('.logo1').attr('src', 'https://s3.amazonaws.com/aceplayout/logos-poster/channel_' + ace.channel_id+'_tvapp_playlist_'+$("#tvapp_playlist_id").val()+'.jpg');
+                    $('.logo1').attr('src', 'https://s3.amazonaws.com/dveo/logos-poster/channel_' + ace.channel_id+'_tvapp_playlist_'+$("#tvapp_playlist_id").val()+'.jpg');
                 } else {
-                	$('.logo1').attr('src', 'https://s3.amazonaws.com/aceplayout/logos-poster/channel_' + ace.channel_id+'_tvapp_playlist_'+$("#tvapp_playlist_id").val()+'.jpg'+'?'+ Math.random());
+                	$('.logo1').attr('src', 'https://s3.amazonaws.com/dveo/logos-poster/channel_' + ace.channel_id+'_tvapp_playlist_'+$("#tvapp_playlist_id").val()+'.jpg'+'?'+ Math.random());
 
                     //$('.logo1').attr('src', $('.logo1').attr('src') + Math.random());
                 }

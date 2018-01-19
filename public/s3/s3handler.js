@@ -38,8 +38,8 @@ var express = require("express"),
     serverSecretKey = process.env.SERVER_SECRET_KEY,
 
     // Set these two values to match your environment
-    expectedBucket = "aceplayout",
-    expectedHostname = "aceplayout.s3.amazonaws.com",
+    expectedBucket = "dveo",
+    expectedHostname = "dveo.s3.amazonaws.com",
 
     // CHANGE TO INTEGERS TO ENABLE POLICY DOCUMENT VERIFICATION ON FILE SIZE
     // (recommended)

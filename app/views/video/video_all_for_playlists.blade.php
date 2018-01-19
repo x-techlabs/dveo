@@ -138,7 +138,7 @@
                                 {{ Form::checkbox('mcb', $video->id) }} 
                             </div>
                             <div class="col-md-2">
-                                <img src="{{ (!empty($video->custom_poster)) ? 'https://s3.amazonaws.com/aceplayout/banners/'.$video->custom_poster : $video->thumbnail_name}}" class="thumbnail_video" style='width:52px;'>
+                                <img src="{{ (!empty($video->custom_poster)) ? 'https://s3.amazonaws.com/dveo/banners/'.$video->custom_poster : $video->thumbnail_name}}" class="thumbnail_video" style='width:52px;'>
                                 <!-- Onclick event for class playVideoInPopup is defined in template.blade.php and it looks for attribute video_id --> 
                                 <img class="playVideoInPopup" src='{{ URL::to('/') }}/images/play.jpg' style='float:left;width:24px;height:24px;margin-top:5px;' video_id='{{$video->id}}'>
                             </div>
@@ -150,7 +150,7 @@
 
                         @else
                             <div class="col-md-4">
-                                <img src="{{ (!empty($video->custom_poster)) ? 'https://s3.amazonaws.com/aceplayout/banners/'.$video->custom_poster : $video->thumbnail_name}}" class="thumbnail_video" style='width:82px;'>
+                                <img src="{{ (!empty($video->custom_poster)) ? 'https://s3.amazonaws.com/dveo/banners/'.$video->custom_poster : $video->thumbnail_name}}" class="thumbnail_video" style='width:82px;'>
                                 <!-- Onclick event for class playVideoInPopup is defined in template.blade.php and it looks for attribute video_id --> 
                                 <img class="playVideoInPopup" src='{{ URL::to('/') }}/images/play.jpg' style='margin-right:50px;width:34px;height:34px;margin-top:5px;' video_id='{{$video->id}}'>
                             </div>

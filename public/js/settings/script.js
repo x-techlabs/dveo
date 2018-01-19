@@ -613,7 +613,7 @@ $(function(){
                 console.log(data);
                 $('#uploadLogoFirst').hide();
                 if($('.logo1').attr('src').indexOf('images/noLogo1.png') !== -1) {
-                    $('.logo1').attr('src', 'https://aceplayout.s3.amazonaws.com/logos/channel_' + ace.channel_id +'.'+ace.logo_ext);
+                    $('.logo1').attr('src', 'https://dveo.s3.amazonaws.com/logos/channel_' + ace.channel_id +'.'+ace.logo_ext);
                 } else {
                     $('.logo1').attr('src', $('.logo1').attr('src') + Math.random());
                 }

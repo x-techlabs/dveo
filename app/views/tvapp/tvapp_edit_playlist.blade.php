@@ -48,12 +48,12 @@
 		
 		<div class='controls poster_control div_for_poster_part_img'>
 			<h4 class='color_green_part'>Poster</h4>
-			<img id="real_file_url" onerror="$('.div_for_poster_part_img img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/aceplayout/logos-poster/channel_{{ $playlist->channel_id }}_tvapp_playlist_{{ $playlist->id }}.jpg" class="logo1 col-md-4">
+			<img id="real_file_url" onerror="$('.div_for_poster_part_img img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/dveo/logos-poster/channel_{{ $playlist->channel_id }}_tvapp_playlist_{{ $playlist->id }}.jpg" class="logo1 col-md-4">
 			<div class="logoLoader">
 			  <span class="logoLoading"></span>
 			</div>
 		   {{ Form::open(array(
-			  'url' => 'https://aceplayout.s3.amazonaws.com/',
+			  'url' => 'https://dveo.s3.amazonaws.com/',
 			  'class' => 'form-horizontal amazon_playlist_logo',
 			  'enctype' => 'multipart/form-data'
 			  )) }}
@@ -101,9 +101,9 @@
 						<br>
 						<div id = "tvapp_image_wrapper" class='controls div_for_feature_image_part'>
 							<h4>TV Apps</h4>
-							 <img id="real_file_url1" onerror="$('.div_for_feature_image_part img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/aceplayout/banners/channel_{{ $playlist->channel_id }}_tvapp_playlist_{{ $playlist->id }}.jpg" class="banner1 col-md-4">
+							 <img id="real_file_url1" onerror="$('.div_for_feature_image_part img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/dveo/banners/channel_{{ $playlist->channel_id }}_tvapp_playlist_{{ $playlist->id }}.jpg" class="banner1 col-md-4">
 							{{ Form::open(array(
-							  'url' => 'https://aceplayout.s3.amazonaws.com/',
+							  'url' => 'https://dveo.s3.amazonaws.com/',
 							  'class' => 'form-horizontal amazon_playlist_banner',
 							  'enctype' => 'multipart/form-data'
 							  )) }}
@@ -119,10 +119,10 @@
 						<div id = "mobileweb_img_wrapper" class='controls div_for_feature_image_part'>
 													
 							<h4>Mobile-Web TV</h4>
-							<img id="mobileweb_image" onerror="$('#mobileweb_img_wrapper img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/aceplayout/banners/channel_{{ BaseController::get_channel_id() }}_mobileweb_playlist_{{ $playlist->id }}.jpg" class="mob_banner1 col-md-4">
+							<img id="mobileweb_image" onerror="$('#mobileweb_img_wrapper img').attr('src', '{{asset('images/noLogo.png')}}')" src="https://s3.amazonaws.com/dveo/banners/channel_{{ BaseController::get_channel_id() }}_mobileweb_playlist_{{ $playlist->id }}.jpg" class="mob_banner1 col-md-4">
 						
 							 {{ Form::open(array(
-								'url' => 'https://aceplayout.s3.amazonaws.com/',
+								'url' => 'https://dveo.s3.amazonaws.com/',
 								'class' => 'form-horizontal send_amazon_mobileweb_image_for_playlist',
 								'enctype' => 'multipart/form-data'
 								)) }}

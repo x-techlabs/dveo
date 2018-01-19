@@ -51,10 +51,10 @@
                             <div class="title">{{ $channel->title }}</div>
                             <span class="fui-new"></span>
                             @if(isset($channel['logo_ext']) && !empty($channel['logo_ext']))
-                                <img onerror="$(this).attr('src', '{{asset('images/noLogo.png')}}')" src="http://aceplayout.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}.{{ $channel['logo_ext'] }}?{{ md5($channel['updated_at']) }}" class="channel_image">
+                                <img onerror="$(this).attr('src', '{{asset('images/noLogo.png')}}')" src="http://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}.{{ $channel['logo_ext'] }}?{{ md5($channel['updated_at']) }}" class="channel_image">
                                 {{--<img onerror="$(this).attr('src', '{{asset('images/noLogo.png')}}')" src="http://prolivestream.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}.{{ $channel['logo_ext'] }}?{{ md5($channel['updated_at']) }}" class="channel_image">--}}
                             @else
-                                <img onerror="$(this).attr('src', '{{asset('images/noLogo.png')}}')" src="http://aceplayout.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}?{{ md5($channel['updated_at']) }}" class="channel_image">
+                                <img onerror="$(this).attr('src', '{{asset('images/noLogo.png')}}')" src="http://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}?{{ md5($channel['updated_at']) }}" class="channel_image">
                                 {{--<img onerror="$(this).attr('src', '{{asset('images/noLogo.png')}}')" src="http://prolivestream.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}?{{ md5($channel['updated_at']) }}" class="channel_image">--}}
                             @endif
                             <div class="created"><span>Created at: </span>{{ $channel->date }}</div>

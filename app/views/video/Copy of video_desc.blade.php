@@ -25,7 +25,7 @@
                         
                                     <video id="local" class="video-js vjs-default-skin" controls preload="none" width="510" height="264"
                                         data-setup="{}">
-                                        <source type="video/mp4" src="https://s3.amazonaws.com/aceplayout/{{$desc->file_name}}.mp4"/>
+                                        <source type="video/mp4" src="https://s3.amazonaws.com/dveo/{{$desc->file_name}}.mp4"/>
 									    <!--source type="video/mp4" src="http://videos.electroteque.org/bitrate/big_buck_bunny_600k.mp4"/-->
 								        <source type="video/webm" src="//videos.electroteque.org/bitrate/big_buck_bunny_600k.webm"/>
 								        <source type="video/ogg"   src="//videos.electroteque.org/bitrate/big_buck_bunny_600k.ogv"/>

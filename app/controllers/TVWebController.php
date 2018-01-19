@@ -424,7 +424,7 @@ class TVWebController extends BaseController {
     		//hd w=266&h=150
     		//sd w=138&h=77
     		
-    		$sdimg = str_replace('https://s3.amazonaws.com/aceplayout/','https://onestudio.imgix.net/',$video->thumbnail_name);
+    		$sdimg = str_replace('https://s3.amazonaws.com/dveo/','https://onestudio.imgix.net/',$video->thumbnail_name);
     		$sdimg .= '?w=266&h=150&fit=crop&crop=entropy&auto=format,enhance&q=60';
     		//$sdimg .= '?w=138&h=77&fit=crop&crop=entropy&auto=format,enhance&q=40';
     		//$sdimg = 'https://goo.gl/3CbmY2';

@@ -22,7 +22,7 @@
                 "payload": {
                     "location": {
                         "storage_provider": "s3",
-                        "path": "https://s3.amazonaws.com/aceplayout"
+                        "path": "https://s3.amazonaws.com/dveo"
                     },
                     "targets": [
                         {

@@ -188,9 +188,9 @@ $(document).ready(function() {
 			},
 			done: function (event, data) {
 				if($('#poster_image').attr('src').indexOf('images/noLogo.png') !== -1) {
-					$('#poster_image').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_poster_video_'+$("#video_id").val()+'.jpg');
+					$('#poster_image').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_poster_video_'+$("#video_id").val()+'.jpg');
 				} else {
-					$('#poster_image').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_poster_video_'+$("#video_id").val() +'.jpg?'+ Math.random());
+					$('#poster_image').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_poster_video_'+$("#video_id").val() +'.jpg?'+ Math.random());
 				}
 				$('#fileupload5').removeClass('logoUploadAfter');
 			}
@@ -284,9 +284,9 @@ $(document).ready(function() {
 			},
 			done: function (event, data) {
 				if($('#tvapp_image').attr('src').indexOf('images/noLogo.png') !== -1) {
-					$('#tvapp_image').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_tvapp_video_'+$("#video_id").val()+'.jpg');
+					$('#tvapp_image').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_tvapp_video_'+$("#video_id").val()+'.jpg');
 				} else {
-					$('#tvapp_image').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_tvapp_video_'+$("#video_id").val() +'.jpg?'+ Math.random());
+					$('#tvapp_image').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_tvapp_video_'+$("#video_id").val() +'.jpg?'+ Math.random());
 				}
 				$('#fileupload2').removeClass('logoUploadAfter');
 			}
@@ -380,9 +380,9 @@ $(document).ready(function() {
 			},
 			done: function (event, data) {
 				if($('#mobileweb_image').attr('src').indexOf('images/noLogo.png') !== -1) {
-					$('#mobileweb_image').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_mobileweb_video_'+$("#video_id").val()+'.jpg');
+					$('#mobileweb_image').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_mobileweb_video_'+$("#video_id").val()+'.jpg');
 				} else {
-					$('#mobileweb_image').attr('src', 'https://s3.amazonaws.com/aceplayout/banners/channel_' + ace.channel_id+'_mobileweb_video_'+$("#video_id").val() +'.jpg?'+ Math.random());
+					$('#mobileweb_image').attr('src', 'https://s3.amazonaws.com/dveo/banners/channel_' + ace.channel_id+'_mobileweb_video_'+$("#video_id").val() +'.jpg?'+ Math.random());
 				}
 				$('#fileupload3').removeClass('logoUploadAfter');
 			}

@@ -11,7 +11,7 @@
 /**
  * S3 Policy and Signature Generation Details
  */
-$bucket = 'aceplayout';
+$bucket = 'dveo';
 
 // these can be found on your Account page, under Security Credentials > Access Keys
 $accessKeyId = $aws_access_key_id;
@@ -142,9 +142,9 @@ $signature = base64_encode(hash_hmac('sha1', $policy, $secret, true));
                                         runtimes : 'html5,flash',
                                       
                                         //S3 bucket location
-                                        //url : 'https://aceplayout.s3-us-west-2.amazonaws.com/',
-                                        //url: 'https://s3.amazonaws.com/aceplayout',
-                                        url : "https://aceplayout.s3.amazonaws.com:443/",
+                                        //url : 'https://dveo.s3-us-west-2.amazonaws.com/',
+                                        //url: 'https://s3.amazonaws.com/dveo',
+                                        url : "https://dveo.s3.amazonaws.com:443/",
                                         multipart: true,
                                         //S3 policy and signature details
                                         multipart_params: {

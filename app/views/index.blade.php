@@ -72,7 +72,7 @@
                                 @if($video->thumbnail_name == null)
                                     In process ...
                                 @else
-                                    <img data="{{ (!empty($video->custom_poster)) ? 'https://s3.amazonaws.com/aceplayout/banners/'.$video->custom_poster : $video->thumbnail_name}}" src="" class="thumbnail_video" style='width:100%;'>  <!-- vinay added style -->
+                                    <img data="{{ (!empty($video->custom_poster)) ? 'https://s3.amazonaws.com/dveo/banners/'.$video->custom_poster : $video->thumbnail_name}}" src="" class="thumbnail_video" style='width:100%;'>  <!-- vinay added style -->
                                 @endif
                             </div>
 

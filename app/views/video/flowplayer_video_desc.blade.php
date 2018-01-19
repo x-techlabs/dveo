@@ -47,7 +47,7 @@
 								    <!--div id="s3" class="flowplayer" data-usesnapshot="true" data-embed="false" data-snapshotname="test"-->
 								    <div class="flowplayer" data-swf="http://1stud.io/js/flowplayer605/flowplayer.swf" data-key="$676546012598233" data-ratio="0.4167">
 								        <video preload='none'>
-								            <source type="video/mp4" src="https://s3.amazonaws.com/aceplayout/{{$desc->file_name}}.mp4"/>
+								            <source type="video/mp4" src="https://s3.amazonaws.com/dveo/{{$desc->file_name}}.mp4"/>
 								            <source type="video/webm" src="http://videos.electroteque.org/big_buck_bunny_480p_h264.webm"/>
 								            <source type="video/mp4" src="http://videos.electroteque.org/big_buck_bunny_480p_h264.mp4"/>
 								            <source type="video/ogg"   src="http://videos.electroteque.org/big_buck_bunny_480p_h264.ogv"/>

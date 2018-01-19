@@ -184,54 +184,54 @@ class VodAmazonS3Controller extends BaseController
 		$filenamej = $payloads['filenamej'];
 
 		$bucketkeya = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 1,
 							'key' => $filenamea);
 
 		$bucketkeyb = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 2,
 							'key' => $filenameb);
 
 		$bucketkeyc = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 3,
 							'key' => $filenamec);
 
 		$bucketkeyd = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 4,
 							'key' => $filenamed);
 
 		$bucketkeye = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 5,
 							'key' => $filenamee);
 
 		$bucketkeyf = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 6,
 							'key' => $filenamef);
 
 		$bucketkeyg = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 7,
 							'key' => $filenameg);
 
 		$bucketkeyh = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 8,
 							'key' => $filenameh);
 
 		$bucketkeyi = array(
 					
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 9,
 							'key' => $filenamei);
 
 		$bucketkeyj = array(
 					
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 10,
 							'key' => $filenamej);
 
@@ -268,22 +268,22 @@ class VodAmazonS3Controller extends BaseController
 		$filenamef = $payloads['filenamef'];
 
 		$bucketkeya = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 1,
 							'key' => $filenamea);
 
 		$bucketkeyb = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 2,
 							'key' => $filenameb);
 
 		$bucketkeyc = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 3,
 							'key' => $filenamec);
 
 		$bucketkeyf = array(
-							'bucketname' => 'aceplayout',
+							'bucketname' => 'dveo',
 							'id' => 4,
 							'key' => $filenamef);
 
@@ -472,7 +472,7 @@ class VodAmazonS3Controller extends BaseController
 		$video->title        		= $payload['title'];
 		$video->description  		= $payload['description'];
         $video->channel_id          = BaseController::get_channel_id();
-		$video->thumbnail_name 		= "https://s3.amazonaws.com/aceplayout/" . $payload['thumbnail_name'];
+		$video->thumbnail_name 		= "https://s3.amazonaws.com/dveo/" . $payload['thumbnail_name'];
 		$video->start_time 			= $payload['start_time'];
 		$video->duration 			= $payload['duration'];
 		$video->file_name 			= $payload['file_name'];
@@ -574,7 +574,7 @@ class VodAmazonS3Controller extends BaseController
 
         $s3 = S3Client::factory( array('key' => 'AKIAIMCQJSKDT4QOHJVA', 'secret' => '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'));
         $result = $s3->createMultipartUpload(array(
-            'Bucket'       => "aceplayout",
+            'Bucket'       => "dveo",
             'Key'          => $info[2],
             'StorageClass' => 'STANDARD',  // 'REDUCED_REDUNDANCY',
             'ACL'          => 'public-read',
@@ -602,7 +602,7 @@ class VodAmazonS3Controller extends BaseController
         $s3 = S3Client::factory( array('key' => 'AKIAIMCQJSKDT4QOHJVA', 'secret' => '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'));
         try {    
             $result = $s3->uploadPart(array(
-                'Bucket'     => "aceplayout",
+                'Bucket'     => "dveo",
                 'Key'        => $info[2],
                 'UploadId'   => $info[3],
                 'PartNumber' => $info[4]+1,
@@ -617,7 +617,7 @@ class VodAmazonS3Controller extends BaseController
         } 
         catch (S3Exception $e) {
             $result = $s3->abortMultipartUpload(array(
-                'Bucket'     => "aceplayout",
+                'Bucket'     => "dveo",
                 'Key'        => $info[2],
                 'UploadId'   => $info[3]
             ));
@@ -636,7 +636,7 @@ class VodAmazonS3Controller extends BaseController
 
         $s3 = S3Client::factory( array('key' => 'AKIAIMCQJSKDT4QOHJVA', 'secret' => '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'));
         $result = $s3->completeMultipartUpload(array(
-            'Bucket'   => "aceplayout",
+            'Bucket'   => "dveo",
             'Key'      => $info[2],
             'UploadId' => $info[3],
             'Parts'    => $parts

@@ -213,11 +213,11 @@
                     <!-- ================================================================= -->
                     <div class="tab-content tab_wrapper" id="tab2">
 
-                        {{ Form::open(array('url' => 'https://aceplayout.s3.amazonaws.com/', 'class' => 'form-horizontal amazon_form_logo', 'enctype' => 'multipart/form-data')) }}
+                        {{ Form::open(array('url' => 'https://dveo.s3.amazonaws.com/', 'class' => 'form-horizontal amazon_form_logo', 'enctype' => 'multipart/form-data')) }}
                         <table class="tab-content table-contain" cellspacing='20'>
                             <tr><td colspan=2 ><p class="title-sec">Channel Logo and Focus-HD (336 x 210):</p></td></tr>
                             <tr>
-                                <td class="tableTd-width350"><img onerror="$('#tab2 img').attr('src', '{{asset('images/noLogo.png')}}')" src="http://aceplayout.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}.{{ $channel['logo_ext'] }}?{{ md5($channel['updated_at']) }}" class="tableImg-width200"></td>
+                                <td class="tableTd-width350"><img onerror="$('#tab2 img').attr('src', '{{asset('images/noLogo.png')}}')" src="http://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}.{{ $channel['logo_ext'] }}?{{ md5($channel['updated_at']) }}" class="tableImg-width200"></td>
                                 <td align='left'>
                                     {{ Form::file('file', array('id' => 'fileupload', 'data-url' => 'server/php/')) }}
                                     {{ Form::hidden('key', 'uploads', array('id' => 'key')) }}

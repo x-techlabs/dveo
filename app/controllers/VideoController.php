@@ -600,7 +600,7 @@ class VideoController extends BaseController {
                     },
         
                     {
-                        "bucket": "aceplayout"
+                        "bucket": "dveo"
                     },
                     [
                         "starts-with",
@@ -618,7 +618,7 @@ class VideoController extends BaseController {
         		)
         		);
        
-        $file_bucket = "aceplayout";
+        $file_bucket = "dveo";
         if (strpos($desc->thumbnail_name, 'ifame') !== false) {
             $file_bucket = 'ifame';
         }

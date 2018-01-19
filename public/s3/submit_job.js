@@ -40,7 +40,7 @@ module.exports.submitFile = function(filename) {
                         "kind": "asset_url",
                         "payload": {
                             "storage_provider": "s3",
-                            "url": "s3://aceplayout/" + filename
+                            "url": "s3://dveo/" + filename
                         }
                     }
                 },
@@ -53,7 +53,7 @@ module.exports.submitFile = function(filename) {
                     "payload": {
                         "location": {
                             "storage_provider": "s3",
-                            "path": "s3://aceplayout/" + filename
+                            "path": "s3://dveo/" + filename
                         },
                         "targets": [
                             {

@@ -601,9 +601,9 @@
                                                 @foreach($invoicesArray as $item => $invoice)
                                                     <tr>
                                                         <td>{{ $invoice->status }}</td>
-                                                        <td>{{ $invoice->date }}</td>
+                                                        <td>{{ (isset($invoice->date) && !empty($invoice->date)) ? $invoice->date : '' }}</td>
                                                         <td>{{ $invoice->id }}</td>
-                                                        <td>{{ $invoice->total }}</td>
+                                                        <td>{{ (isset($invoice->total) && !empty($invoice->total)) ? $invoice->total : '' }}</td>
                                                         @if($invoice->status != 'paid')
                                                             <!-- <td><span class="btn btn-success">Pay</span></td> -->
                                                         @endif

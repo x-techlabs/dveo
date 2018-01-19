@@ -24,7 +24,7 @@ class BaseController extends Controller
      */
     protected $data = [
         'channel' => [],
-        'title' => '1studio',
+        'title' => 'Dveo',
     ];
 
     /**

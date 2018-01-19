@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'postmaster@sandboxc41b9024bb164f2b96ba5ab647fad682.mailgun.org', 'name' => '1studio'),
+	'from' => array('address' => 'postmaster@sandboxc41b9024bb164f2b96ba5ab647fad682.mailgun.org', 'name' => 'Dveo'),
 
 	/*
 	|--------------------------------------------------------------------------

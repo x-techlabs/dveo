@@ -1014,7 +1014,7 @@ class SettingsController extends BaseController {
         }
         else
         {
-            $feed[] = 'appType="1studio"';
+            $feed[] = 'appType="Dveo"';
         }
 
         $feed[] = 'analytics="'.$c->analytics.'"';

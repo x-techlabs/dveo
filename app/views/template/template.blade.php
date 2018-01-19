@@ -680,13 +680,13 @@ currentTime++;
                             <div class="company_logo">
                                 <a href="/" id="logo">
                                     @if($channel['id'] == 86)
-                                        <img onerror="$('#logo img').attr('src', '{{asset('images/noLogo.png')}}')" src="/images/imgpsh_fullsize.jpg" alt="1studio" class="logo1 center-block">
+                                        <img onerror="$('#logo img').attr('src', '{{asset('images/noLogo.png')}}')" src="/images/imgpsh_fullsize.jpg" alt="dveo" class="logo1 center-block">
                                     @else
 
                                         @if(isset($channel['logo_ext']) && !empty($channel['logo_ext']))
-                                            <img onerror="noLogoError()" src="https://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}.{{ $channel['logo_ext'] }}?{{ md5($channel['updated_at']) }}" alt="1studio" class="logo1 center-block">
+                                            <img onerror="noLogoError()" src="https://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}.{{ $channel['logo_ext'] }}?{{ md5($channel['updated_at']) }}" alt="dveo" class="logo1 center-block">
                                         @else
-                                            <img onerror="noLogoError()" src="https://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}?{{ md5($channel['updated_at']) }}" alt="1studio" class="logo1 center-block">
+                                            <img onerror="noLogoError()" src="https://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}?{{ md5($channel['updated_at']) }}" alt="dveo" class="logo1 center-block">
                                         @endif
                                     @endif
                                     <div id = "uploadLogoFirst">
@@ -825,9 +825,9 @@ currentTime++;
       <div class='div_for_left_part_in_left_parth'></div>
       <div class="div_for_logo_left_part">
 		@if(isset($channel['logo_ext']) && !empty($channel['logo_ext']))
-			<img onerror="$('#logo img').attr('src', '{{asset('images/noLogo.png')}}')" src="http://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}.{{ $channel['logo_ext'] }}?{{ md5($channel['updated_at']) }}" alt="1studio" class="logo1 center-block image_left_part__preview_page">
+			<img onerror="$('#logo img').attr('src', '{{asset('images/noLogo.png')}}')" src="http://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}.{{ $channel['logo_ext'] }}?{{ md5($channel['updated_at']) }}" alt="dveo" class="logo1 center-block image_left_part__preview_page">
 		@else
-			<img onerror="$('#logo img').attr('src', '{{asset('images/noLogo.png')}}')" src="http://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}?{{ md5($channel['updated_at']) }}" alt="1studio" class="logo1 center-block image_left_part__preview_page">
+			<img onerror="$('#logo img').attr('src', '{{asset('images/noLogo.png')}}')" src="http://dveo.s3.amazonaws.com/logos/channel_{{ $channel['id'] }}?{{ md5($channel['updated_at']) }}" alt="dveo" class="logo1 center-block image_left_part__preview_page">
 		@endif
 	  
 	</div>

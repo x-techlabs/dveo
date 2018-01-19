@@ -759,14 +759,14 @@ currentTime++;
                                     <?php else: ?>
 
                                         <?php if(isset($channel['logo_ext']) && !empty($channel['logo_ext'])): ?>
-                                            <img onerror="noLogoError()" src="https://aceplayout.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>.<?php echo $channel['logo_ext']; ?>?<?php echo md5($channel['updated_at']); ?>" alt="1studio" class="logo1 center-block">
+                                            <img onerror="noLogoError()" src="https://dveo.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>.<?php echo $channel['logo_ext']; ?>?<?php echo md5($channel['updated_at']); ?>" alt="1studio" class="logo1 center-block">
                                         <?php else: ?>
-                                            <img onerror="noLogoError()" src="https://aceplayout.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>?<?php echo md5($channel['updated_at']); ?>" alt="1studio" class="logo1 center-block">
+                                            <img onerror="noLogoError()" src="https://dveo.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>?<?php echo md5($channel['updated_at']); ?>" alt="1studio" class="logo1 center-block">
                                         <?php endif; ?>
                                     <?php endif; ?>
                                     <div id = "uploadLogoFirst">
                                         <h1 class="text-danger nologoAlert">No TV App Logo</h1>
-                                        <form method="POST" action="https://aceplayout.s3.amazonaws.com/" accept-charset="UTF-8" class="form-horizontal amazon_form_logo" enctype="multipart/form-data">
+                                        <form method="POST" action="https://dveo.s3.amazonaws.com/" accept-charset="UTF-8" class="form-horizontal amazon_form_logo" enctype="multipart/form-data">
                                             <input name="_token" type="hidden" value="<?php echo csrf_token(); ?>">
                                             <input id="fileupload" data-url="server/php/" name="file" type="file">
                                             <input id="key" name="key" type="hidden" value="uploads">
@@ -900,9 +900,9 @@ currentTime++;
       <div class='div_for_left_part_in_left_parth'></div>
       <div class="div_for_logo_left_part">
 		<?php if(isset($channel['logo_ext']) && !empty($channel['logo_ext'])): ?>
-			<img onerror="$('#logo img').attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://aceplayout.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>.<?php echo $channel['logo_ext']; ?>?<?php echo md5($channel['updated_at']); ?>" alt="1studio" class="logo1 center-block image_left_part__preview_page">
+			<img onerror="$('#logo img').attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://dveo.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>.<?php echo $channel['logo_ext']; ?>?<?php echo md5($channel['updated_at']); ?>" alt="1studio" class="logo1 center-block image_left_part__preview_page">
 		<?php else: ?>
-			<img onerror="$('#logo img').attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://aceplayout.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>?<?php echo md5($channel['updated_at']); ?>" alt="1studio" class="logo1 center-block image_left_part__preview_page">
+			<img onerror="$('#logo img').attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://dveo.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>?<?php echo md5($channel['updated_at']); ?>" alt="1studio" class="logo1 center-block image_left_part__preview_page">
 		<?php endif; ?>
 	  
 	</div>

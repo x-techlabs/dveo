@@ -57,10 +57,10 @@
                             <div class="title"><?php echo $channel->title; ?></div>
                             <span class="fui-new"></span>
                             <?php if(isset($channel['logo_ext']) && !empty($channel['logo_ext'])): ?>
-                                <img onerror="$(this).attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://aceplayout.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>.<?php echo $channel['logo_ext']; ?>?<?php echo md5($channel['updated_at']); ?>" class="channel_image">
+                                <img onerror="$(this).attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://dveo.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>.<?php echo $channel['logo_ext']; ?>?<?php echo md5($channel['updated_at']); ?>" class="channel_image">
                                 <?php /*<img onerror="$(this).attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://prolivestream.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>.<?php echo $channel['logo_ext']; ?>?<?php echo md5($channel['updated_at']); ?>" class="channel_image">*/ ?>
                             <?php else: ?>
-                                <img onerror="$(this).attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://aceplayout.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>?<?php echo md5($channel['updated_at']); ?>" class="channel_image">
+                                <img onerror="$(this).attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://dveo.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>?<?php echo md5($channel['updated_at']); ?>" class="channel_image">
                                 <?php /*<img onerror="$(this).attr('src', '<?php echo asset('images/noLogo.png'); ?>')" src="http://prolivestream.s3.amazonaws.com/logos/channel_<?php echo $channel['id']; ?>?<?php echo md5($channel['updated_at']); ?>" class="channel_image">*/ ?>
                             <?php endif; ?>
                             <div class="created"><span>Created at: </span><?php echo $channel->date; ?></div>

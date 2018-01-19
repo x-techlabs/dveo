@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Password ― 1studio</title>
+    <title>Password ― Dveo</title>
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}" />
 
     {{-- CSS Libraries --}}

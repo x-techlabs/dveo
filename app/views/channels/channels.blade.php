@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Channel ― 1studio</title>
+        <title>Channel ― Dveo</title>
         <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}" />
         {{ HTML::style('css/bootstrap.min.css') }}
         {{ HTML::style('bower_components/flat-ui/dist/css/flat-ui.css') }}

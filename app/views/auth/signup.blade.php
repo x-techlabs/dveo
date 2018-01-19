@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <title>Signup ― 1studio</title>
+    <title>Signup ― Dveo</title>
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}" />
 </head>
 <body>
@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="bottom_text">
-        <h2>custom development, design, & app management by 1studio</h2>
+        <h2>custom development, design, & app management by Dveo</h2>
     </div>
 </header>
 <div id = "logos_wrapper">

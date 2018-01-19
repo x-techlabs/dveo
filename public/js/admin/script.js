@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // Channels
     function channels() {
-        document.title = 'Channels ― 1studio';
+        document.title = 'Channels ― Dveo';
         $.get("channels", function(data) {
             $(".panel-append").html(data);
         });
@@ -11,7 +11,7 @@ $(document).ready(function(){
 
     // Users
     function users() {
-        document.title = 'Users ― 1studio';
+        document.title = 'Users ― Dveo';
         $.get("users", function(data) {
             $(".panel-append").html(data);
         });
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     // Companies
     function companies() {
-        document.title = 'Companies ― 1studio';
+        document.title = 'Companies ― Dveo';
         $.get("companies", function(data) {
             $(".panel-append").html(data);
         });

@@ -26,7 +26,7 @@
 	                $video = Images::find($video_id['image_id']);
 
 	                if(isset($video['file_name'])) {
-	                    $playlist->video_thumb = 'https://s3.amazonaws.com/1stud-images/'.$video['file_name'];
+	                    $playlist->video_thumb = 'https://s3.amazonaws.com/dveo-images/'.$video['file_name'];
 	                    break;
 	                } else {
 	                    $playlist->video_thumb = 'http://speakingagainstabuse.com/wp-content/themes/AiwazMag/images/no-img.png';
@@ -66,7 +66,7 @@
 	        $image->storage = '';
 	        $image->source = "internal";
 	        $image->thumbnail_name = '/images/'.$fullpath;
-	        $commandString = 'ffmpeg -ss 0:03 -i https://s3.amazonaws.com/1stud-images/'.$path.'.jpg -vframes 1 /var/www/1stud.io/public_html/1stud/public/images/'.$fullpath.' 2>&1';
+	        $commandString = 'ffmpeg -ss 0:03 -i https://s3.amazonaws.com/dveo-images/'.$path.'.jpg -vframes 1 /var/www/1stud.io/public_html/1stud/public/images/'.$fullpath.' 2>&1';
 	        exec($commandString, $output);
 
 	        $timeString="00:00:00";
@@ -272,7 +272,7 @@
 
 	        $s3 = S3Client::factory( array('key' => 'AKIAIMCQJSKDT4QOHJVA', 'secret' => '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'));
 	        $result = $s3->createMultipartUpload(array(
-	            'Bucket'       => "1stud-images",
+	            'Bucket'       => "dveo-images",
 	            'Key'          => $info[2],
 	            'StorageClass' => 'STANDARD',
 	            'ACL'          => 'public-read',
@@ -296,7 +296,7 @@
 	        $s3 = S3Client::factory( array('key' => 'AKIAIMCQJSKDT4QOHJVA', 'secret' => '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'));
 	        try {    
 	            $result = $s3->uploadPart(array(
-	                'Bucket'     => "1stud-images",
+	                'Bucket'     => "dveo-images",
 	                'Key'        => $info[2],
 	                'UploadId'   => $info[3],
 	                'PartNumber' => $info[4]+1,
@@ -311,7 +311,7 @@
 	        } 
 	        catch (S3Exception $e) {
 	            $result = $s3->abortMultipartUpload(array(
-	                'Bucket'     => "1stud-images",
+	                'Bucket'     => "dveo-images",
 	                'Key'        => $info[2],
 	                'UploadId'   => $info[3]
 	            ));
@@ -329,7 +329,7 @@
 
 	        $s3 = S3Client::factory( array('key' => 'AKIAIMCQJSKDT4QOHJVA', 'secret' => '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'));
 	        $result = $s3->completeMultipartUpload(array(
-	            'Bucket'   => "1stud-images",
+	            'Bucket'   => "dveo-images",
 	            'Key'      => $info[2],
 	            'UploadId' => $info[3],
 	            'Parts'    => $parts
@@ -449,7 +449,7 @@
 			$video->title        		= $payload['title'];
 			$video->description  		= $payload['description'];
 	        $video->channel_id          = BaseController::get_channel_id();
-			$video->thumbnail_name 		= "https://s3.amazonaws.com/1stud-images/" . $payload['thumbnail_name'];
+			$video->thumbnail_name 		= "https://s3.amazonaws.com/dveo-images/" . $payload['thumbnail_name'];
 			$video->file_name 			= $payload['file_name'];
 			$video->encode_status 		= $payload['encode_status'];
 			$video->type 				= $payload['type'];

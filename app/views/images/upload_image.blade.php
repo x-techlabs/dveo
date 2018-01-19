@@ -231,7 +231,7 @@
                         debug: true,
                         element: document.getElementById('fine-uploader'),
                         request: {
-                            endpoint: '1stud-images.s3.amazonaws.com',
+                            endpoint: 'dveo-images.s3.amazonaws.com',
                             accessKey: 'AKIAJWU4DYR6OMHE2YPQ'
                         },
                         signature: {

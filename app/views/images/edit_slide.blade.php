@@ -56,7 +56,7 @@
 
                                 <div class="row center-block posRel add_videos_in_playlist" data-video_id="{{$video['id']}}">
                                     <div class="col-md-4">
-                                        <img src="https://s3.amazonaws.com/1stud-images/{{$video['file_name']}}" class="thumbnail_video">
+                                        <img src="https://s3.amazonaws.com/dveo-images/{{$video['file_name']}}" class="thumbnail_video">
                                     </div>
                                     <div class="col-md-7">
                                         <p style="text-align: left; margin: 0; overflow: hidden;">

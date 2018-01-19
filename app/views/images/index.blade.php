@@ -54,7 +54,7 @@
                                         <button id="{{ $image->id }}" class="edit_image fr editDelete btn btn-block btn-lg btn-inverse" title="Edit image">
                                             <span class="fui-new"></span>
                                         </button>
-                                        <a href="https://s3.amazonaws.com/1stud-images/{{ $image->file_name }}" data-lightbox = "{{ $image->id }}">
+                                        <a href="https://s3.amazonaws.com/dveo-images/{{ $image->file_name }}" data-lightbox = "{{ $image->id }}">
                                             <span class="zoomImg" img_id="{{ $image->id }}"><i class="fa fa-search fa-lg"></i></span>
                                         </a>
 
@@ -62,7 +62,7 @@
 
                                         <div class="row center-block">
                                             <div class="col-md-2">        
-                                                <img src="https://s3.amazonaws.com/1stud-images/{{ $image->file_name }}" class="thumbnail_video" style="width:100%;">
+                                                <img src="https://s3.amazonaws.com/dveo-images/{{ $image->file_name }}" class="thumbnail_video" style="width:100%;">
                                             </div>
 
                                             <div class="col-md-10">

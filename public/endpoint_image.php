@@ -32,8 +32,8 @@ $clientPrivateKey = 'j+9HpYI9t8r/Qvlj4vKsgqhWrMebGTmq7+TFGp9L';
 
 // The following variables are used when validating the policy document
 // sent by the uploader. 
-$expectedBucketName = '1stud-images';
-$expectedHostName = '1stud-images.s3.amazonaws.com'; // v4-only
+$expectedBucketName = 'dveo-images';
+$expectedHostName = 'dveo-images.s3.amazonaws.com'; // v4-only
 // $expectedMaxSize is the value you set the sizeLimit property of the 
 // validation option. We assume it is `null` here. If you are performing
 // validation, then change this to match the integer value you specified
